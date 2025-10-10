@@ -563,3 +563,280 @@ h3 { font-size: 1.75rem; }
         font-size: 1.5rem;
     }
 }
+
+/* ===== MEMOPAD SPOTLIGHT SECTION ===== */
+.memopad-spotlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.memopad-spotlight::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(65,160,141,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Spotlight Header */
+.spotlight-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.spotlight-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.spotlight-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Spotlight Content Grid */
+.spotlight-content {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.spotlight-description h3 {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-description p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.description-cta-text {
+    font-weight: 600;
+    color: var(--color-primary);
+    padding-top: 1rem;
+    border-top: 2px solid rgba(65,160,141,0.2);
+    margin-top: 1.5rem;
+}
+
+/* Metrics Grid */
+.spotlight-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.metric-card {
+    background: white;
+    padding: 1.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform var(--transition-base);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.metric-card:hover::before {
+    transform: scaleY(1);
+}
+
+.metric-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 0.25rem;
+}
+
+.metric-detail {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Color variations for metrics */
+.metric-funding .metric-value { color: #27ae60; }
+.metric-participants .metric-value { color: #3498db; }
+.metric-phases .metric-value { color: #e74c3c; }
+.metric-community .metric-value { color: #9b59b6; }
+
+/* Video Demo */
+.spotlight-demo {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    background: var(--color-dark);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.video-caption strong {
+    color: var(--color-dark);
+}
+
+/* Spotlight CTA */
+.spotlight-cta {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+    border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background: #368f7d;
+    border-color: #368f7d;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE - MEMOPAD SPOTLIGHT ===== */
+@media (max-width: 968px) {
+    .spotlight-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .spotlight-metrics {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .metric-card {
+        padding: 1.5rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .spotlight-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-large {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .spotlight-description h3 {
+        font-size: 1.25rem;
+    }
+    
+    .spotlight-description p {
+        font-size: 1rem;
+    }
+    
+    .metric-icon {
+        font-size: 1.5rem;
+    }
+    
+    .metric-value {
+        font-size: 1.75rem;
+    }
+    
+    .metric-label {
+        font-size: 0.875rem;
+    }
+    
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
