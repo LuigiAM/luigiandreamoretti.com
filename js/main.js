@@ -14,28 +14,58 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links (with navbar offset)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        
+        if (targetId === '#') return; // Skip if just "#"
+        
+        const target = document.querySelector(targetId);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const navbarHeight = 80; // Adjust based on your navbar height
+            const targetPosition = target.offsetTop - navbarHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Mobile nav toggle (functionality added later)
+// Mobile nav toggle (enhanced)
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const navOverlay = document.querySelector('.nav-overlay');
+const body = document.body;
 
 if (navToggle) {
+    // Toggle menu
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         navToggle.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking overlay
+    navOverlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+        navOverlay.classList.remove('active');
+        body.style.overflow = '';
+    });
+    
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            navOverlay.classList.remove('active');
+            body.style.overflow = '';
+        });
     });
 }
 

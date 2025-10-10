@@ -1,0 +1,6 @@
+# Luigi A. Moretti Personal Website - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://luigiandreamoretti.com/sitemap.xml
