@@ -1358,3 +1358,237 @@ h3 { font-size: 1.75rem; }
         margin-bottom: 0.5rem;
     }
 }
+
+/* Show More Button */
+.show-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.show-more-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+}
+
+.show-more-btn.hidden {
+    display: none;
+}
+
+.show-more-btn svg {
+    transition: transform var(--transition-base);
+}
+
+.show-more-btn.expanded svg {
+    transform: rotate(180deg);
+}
+
+/* ===== AVAILABILITY DASHBOARD SECTION ===== */
+.availability {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-2) 100%);
+    color: white;
+}
+
+.availability-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.availability-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255,255,255,0.95);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.status-pulse {
+    width: 12px;
+    height: 12px;
+    background: var(--color-success);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.status-text {
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.availability-header h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.availability-intro {
+    font-size: 1.125rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.availability-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.availability-column h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.availability-list {
+    list-style: none;
+    padding: 0;
+}
+
+.availability-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    align-items: flex-start;
+}
+
+.list-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.availability-list li span:last-child {
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.availability-cta {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: var(--color-dark);
+    color: rgba(255,255,255,0.8);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.footer-description {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-column .btn {
+    padding: 0.75rem 1.5rem;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-meta {
+    opacity: 0.6;
+}
+
+.footer-meta a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.footer-meta a:hover {
+    color: var(--color-primary);
+}
+
+/* ===== RESPONSIVE - AVAILABILITY & FOOTER ===== */
+@media (max-width: 968px) {
+    .availability-card {
+        padding: 2rem;
+    }
+    
+    .availability-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .availability-header h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .availability-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .availability-intro {
+        font-size: 1rem;
+    }
+    
+    .availability-cta {
+        flex-direction: column;
+    }
+    
+    .availability-cta .btn {
+        width: 100%;
+    }
+}
