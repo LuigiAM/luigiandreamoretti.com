@@ -38,3 +38,49 @@ if (navToggle) {
         navToggle.classList.toggle('active');
     });
 }
+
+// Experience Timeline Toggle
+document.querySelectorAll('.timeline-header').forEach(header => {
+    header.addEventListener('click', function() {
+        const item = this.closest('.timeline-item');
+        const isExpanded = item.getAttribute('data-expanded') === 'true';
+        
+        // Toggle expansion
+        item.setAttribute('data-expanded', !isExpanded);
+    });
+});
+
+// Achievements Filter
+const filterButtons = document.querySelectorAll('.filter-btn');
+const achievementCards = document.querySelectorAll('.achievement-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter cards with fade animation
+        achievementCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if (filter === 'all' || category === filter) {
+                card.style.display = 'flex';
+                // Trigger reflow for animation
+                card.offsetHeight;
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.3s ease';
+                    card.style.opacity = '1';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
