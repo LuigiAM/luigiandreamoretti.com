@@ -35,42 +35,76 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile nav toggle (FIXED - with DOMContentLoaded wrapper)
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navOverlay = document.querySelector('.nav-overlay');
-    const body = document.body;
+// ===== MOBILE NAVIGATION (COMPLETE FIX) =====
+(function() {
+    // Wait for DOM to fully load
+    const initMobileNav = () => {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const body = document.body;
 
-    if (navToggle && navLinks && navOverlay) {
-        // Toggle menu
-        navToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-            navToggle.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        });
+        // Debug: Log element existence
+        console.log('Nav Toggle:', navToggle ? 'Found' : 'Missing');
+        console.log('Nav Links:', navLinks ? 'Found' : 'Missing');
+        console.log('Nav Overlay:', navOverlay ? 'Found' : 'Missing');
 
-        // Close menu when clicking overlay
-        navOverlay.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            navToggle.classList.remove('active');
-            navOverlay.classList.remove('active');
-            body.style.overflow = '';
-        });
+        if (!navToggle || !navLinks || !navOverlay) {
+            console.error('Mobile nav elements missing!');
+            return;
+        }
 
-        // Close menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
+        // Toggle menu function
+        const toggleMenu = (forceClose = false) => {
+            if (forceClose) {
                 navLinks.classList.remove('active');
                 navToggle.classList.remove('active');
                 navOverlay.classList.remove('active');
                 body.style.overflow = '';
+            } else {
+                const isActive = navLinks.classList.toggle('active');
+                navToggle.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                body.style.overflow = isActive ? 'hidden' : '';
+            }
+        };
+
+        // Toggle button click
+        navToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Overlay click (close menu)
+        navOverlay.addEventListener('click', () => {
+            toggleMenu(true);
+        });
+
+        // Nav link clicks (close menu)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu(true);
             });
         });
+
+        // Escape key (close menu)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                toggleMenu(true);
+            }
+        });
+
+        console.log('Mobile nav initialized successfully');
+    };
+
+    // Initialize after DOM loads
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileNav);
+    } else {
+        initMobileNav();
     }
-});
+})();
 
 
 // Experience Timeline Toggle
