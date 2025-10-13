@@ -35,39 +35,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile nav toggle (enhanced)
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navOverlay = document.querySelector('.nav-overlay');
-const body = document.body;
+// Mobile nav toggle (FIXED - with DOMContentLoaded wrapper)
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const body = document.body;
 
-if (navToggle) {
-    // Toggle menu
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        navToggle.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    });
-    
-    // Close menu when clicking overlay
-    navOverlay.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
-        navOverlay.classList.remove('active');
-        body.style.overflow = '';
-    });
-    
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
+    if (navToggle && navLinks && navOverlay) {
+        // Toggle menu
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking overlay
+        navOverlay.addEventListener('click', function() {
             navLinks.classList.remove('active');
             navToggle.classList.remove('active');
             navOverlay.classList.remove('active');
             body.style.overflow = '';
         });
-    });
-}
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                navOverlay.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    }
+});
+
 
 // Experience Timeline Toggle
 document.querySelectorAll('.timeline-header').forEach(header => {
@@ -80,118 +84,215 @@ document.querySelectorAll('.timeline-header').forEach(header => {
     });
 });
 
-// Achievements Filter with Sorting and Show More
-const filterButtons = document.querySelectorAll('.filter-btn');
-const achievementCards = document.querySelectorAll('.achievement-card');
-const achievementsGrid = document.querySelector('.achievements-grid');
-const showMoreBtn = document.querySelector('.show-more-btn');
-let currentFilter = 'all';
-let showingAll = false;
+// ===== PHOTO GALLERY LIGHTBOX =====
+(function() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxDetail = document.getElementById('lightbox-detail');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    
+    if (!lightbox || galleryItems.length === 0) return;
+    
+    let currentIndex = 0;
+    let currentCategory = 'all';
+    let filteredItems = [];
 
-// Sort cards by date (newest first) on load
-function sortAchievements() {
-    const cardsArray = Array.from(achievementCards);
-    cardsArray.sort((a, b) => {
-        const dateA = a.getAttribute('data-date');
-        const dateB = b.getAttribute('data-date');
-        return dateB.localeCompare(dateA); // Descending order
+    // Open lightbox
+    function openLightbox(index, category) {
+        currentCategory = category;
+        filteredItems = Array.from(galleryItems).filter(item => 
+            item.getAttribute('data-lightbox') === category
+        );
+        currentIndex = index;
+        updateLightboxContent();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Update lightbox content
+    function updateLightboxContent() {
+        const item = filteredItems[currentIndex];
+        const img = item.querySelector('img');
+        const caption = item.querySelector('.gallery-caption').textContent;
+        const detail = item.querySelector('.gallery-detail').textContent;
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption;
+        lightboxDetail.textContent = detail;
+
+        // Update navigation button visibility
+        prevBtn.style.display = currentIndex > 0 ? 'flex' : 'none';
+        nextBtn.style.display = currentIndex < filteredItems.length - 1 ? 'flex' : 'none';
+    }
+
+    // Close lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Navigate lightbox
+    function navigateLightbox(direction) {
+        currentIndex += direction;
+        currentIndex = Math.max(0, Math.min(currentIndex, filteredItems.length - 1));
+        updateLightboxContent();
+    }
+
+    // Event listeners
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-lightbox');
+            const categoryItems = Array.from(galleryItems).filter(i => 
+                i.getAttribute('data-lightbox') === category
+            );
+            const categoryIndex = categoryItems.indexOf(this);
+            openLightbox(categoryIndex, category);
+        });
     });
-    
-    // Reorder in DOM
-    cardsArray.forEach(card => achievementsGrid.appendChild(card));
-}
 
-// Initial sort
-sortAchievements();
+    closeBtn.addEventListener('click', closeLightbox);
 
-// Filter functionality
-function filterAchievements(filter) {
-    currentFilter = filter;
-    showingAll = false;
-    showMoreBtn.classList.remove('expanded');
-    showMoreBtn.querySelector('svg').style.transform = '';
-    
-    const cardsArray = Array.from(achievementCards);
-    let visibleCount = 0;
-    
-    cardsArray.forEach((card, index) => {
-        const category = card.getAttribute('data-category');
-        const shouldShow = filter === 'all' || category === filter;
-        
-        if (shouldShow) {
-            visibleCount++;
-            // Show first 9 cards (3 rows), hide rest initially
-            if (visibleCount <= 9) {
-                card.style.display = 'flex';
-                card.classList.remove('hidden-by-show-more');
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                }, 10 * index);
-            } else {
-                card.style.display = 'none';
-                card.classList.add('hidden-by-show-more');
-            }
-        } else {
-            card.style.display = 'none';
-            card.classList.remove('hidden-by-show-more');
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
         }
     });
-    
-    // Show/hide "Show More" button
-    if (visibleCount > 9) {
-        showMoreBtn.classList.remove('hidden');
-    } else {
-        showMoreBtn.classList.add('hidden');
-    }
-}
 
-// Filter button clicks
-filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
+    prevBtn.addEventListener('click', () => navigateLightbox(-1));
+    nextBtn.addEventListener('click', () => navigateLightbox(1));
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
         
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Apply filter
-        filterAchievements(filter);
+        switch(e.key) {
+            case 'Escape':
+                closeLightbox();
+                break;
+            case 'ArrowLeft':
+                if (currentIndex > 0) navigateLightbox(-1);
+                break;
+            case 'ArrowRight':
+                if (currentIndex < filteredItems.length - 1) navigateLightbox(1);
+                break;
+        }
     });
-});
+})();
 
-// Show More button
-showMoreBtn.addEventListener('click', function() {
-    showingAll = !showingAll;
+// ===== ACHIEVEMENTS FILTER + SHOW MORE/LESS (COMPLETE FIX) =====
+(function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const achievementCards = document.querySelectorAll('.achievement-card');
+    const achievementsGrid = document.querySelector('.achievements-grid');
+    const showMoreBtn = document.querySelector('.show-more-btn');
     
-    const hiddenCards = document.querySelectorAll('.achievement-card.hidden-by-show-more');
+    if (!achievementsGrid || !showMoreBtn) return;
     
-    if (showingAll) {
-        // Show all cards
-        hiddenCards.forEach((card, index) => {
+    let currentFilter = 'all';
+    let isExpanded = false;
+    const CARDS_PER_PAGE = 6;
+
+    // Sort cards by date (newest first)
+    function sortAchievements() {
+        const cardsArray = Array.from(achievementCards);
+        cardsArray.sort((a, b) => {
+            const dateA = a.getAttribute('data-date') || '0000-00';
+            const dateB = b.getAttribute('data-date') || '0000-00';
+            return dateB.localeCompare(dateA);
+        });
+        cardsArray.forEach(card => achievementsGrid.appendChild(card));
+    }
+
+    // Get visible cards for current filter
+    function getVisibleCards() {
+        return Array.from(achievementCards).filter(card => {
+            const category = card.getAttribute('data-category');
+            return currentFilter === 'all' || category === currentFilter;
+        });
+    }
+
+    // Update card visibility
+    function updateCardVisibility() {
+        const visibleCards = getVisibleCards();
+        const totalVisible = visibleCards.length;
+
+        achievementCards.forEach(card => {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+        });
+
+        const cardsToShow = isExpanded ? visibleCards : visibleCards.slice(0, CARDS_PER_PAGE);
+        
+        cardsToShow.forEach((card, index) => {
             card.style.display = 'flex';
-            card.classList.remove('hidden-by-show-more');
             setTimeout(() => {
                 card.style.opacity = '1';
-            }, 50 * index);
+            }, 10 * index);
         });
-        this.textContent = 'Show Less';
-        this.classList.add('expanded');
-    } else {
-        // Hide extra cards
-        hiddenCards.forEach(card => {
-            card.style.opacity = '0';
-            setTimeout(() => {
-                card.style.display = 'none';
-                card.classList.add('hidden-by-show-more');
-            }, 300);
-        });
-        this.innerHTML = 'Show More<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle;"><polyline points="6 9 12 15 18 9"></polyline></svg>';
-        this.classList.remove('expanded');
-        
-        // Scroll to achievements section
-        document.querySelector('#achievements').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-});
 
-// Initial filter
-filterAchievements('all');
+        // Update button
+        if (totalVisible > CARDS_PER_PAGE) {
+            showMoreBtn.style.display = 'inline-flex';
+            updateButtonText();
+        } else {
+            showMoreBtn.style.display = 'none';
+        }
+    }
+
+    // Update button text and icon
+    function updateButtonText() {
+        if (isExpanded) {
+            showMoreBtn.innerHTML = `
+                Show Less 
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle; transform: rotate(180deg);">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            `;
+        } else {
+            showMoreBtn.innerHTML = `
+                Show More 
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle;">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            `;
+        }
+    }
+
+    // Filter button clicks
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            currentFilter = this.getAttribute('data-filter');
+            isExpanded = false;
+            
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            updateCardVisibility();
+        });
+    });
+
+    // Show More/Less button
+    showMoreBtn.addEventListener('click', function() {
+        isExpanded = !isExpanded;
+        updateCardVisibility();
+        
+        if (!isExpanded) {
+            // Scroll back to achievements section when collapsing
+            setTimeout(() => {
+                document.querySelector('#achievements').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 100);
+        }
+    });
+
+    // Initialize
+    sortAchievements();
+    updateCardVisibility();
+})();

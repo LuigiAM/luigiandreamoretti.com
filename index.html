@@ -88,10 +88,7 @@
                 <li><a href="#current-focus">Current Focus</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#availability" class="availability-link">
-                    <span class="status-dot"></span> Available Fall 2026
-                </a></li>
+                <li><a href="#availability">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -180,16 +177,19 @@
                 
                 <div class="about-highlights">
                     <div class="highlight-item">
-                        <span class="highlight-number">3</span>
-                        <span class="highlight-label">Startups Co-Founded</span>
+                        <span class="highlight-icon">🧬</span>
+                        <span class="highlight-label">Multidisciplinary</span>
+                        <span class="highlight-detail">Medicine × Tech × Product</span>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-number">87+</span>
-                        <span class="highlight-label">Co-Design Participants</span>
+                        <span class="highlight-icon">🎓</span>
+                        <span class="highlight-label">Evidence-Based Innovation</span>
+                        <span class="highlight-detail">Research-based products</span>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-number">£7.5K</span>
-                        <span class="highlight-label">Research Funding Secured</span>
+                        <span class="highlight-icon">💡</span>
+                        <span class="highlight-label">0→1 Builder</span>
+                        <span class="highlight-detail">Concept to deployed prototype</span>
                     </div>
                 </div>
             </div>
@@ -247,7 +247,7 @@
                 
                 <div class="metric-card metric-community">
                     <div class="metric-icon">📬</div>
-                    <div class="metric-value">250+</div>
+                    <div class="metric-value">300+</div>
                     <div class="metric-label">Newsletter Subscribers</div>
                     <div class="metric-detail">Monthly project updates</div>
                 </div>
@@ -294,7 +294,7 @@
         
         <div class="timeline">
             <!-- Experience Entry 1: HUG x Milbotix -->
-            <div class="timeline-item" data-expanded="true">
+            <div class="timeline-item" data-expanded="false">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
                     <div class="timeline-header">
@@ -345,7 +345,7 @@
             </div>
             
             <!-- Experience Entry 2: University of Bristol -->
-            <div class="timeline-item" data-expanded="true">
+            <div class="timeline-item" data-expanded="false">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
                     <div class="timeline-header">
@@ -397,7 +397,7 @@
             </div>
             
             <!-- Experience Entry 3: PhD UWE -->
-            <div class="timeline-item" data-expanded="true">
+            <div class="timeline-item" data-expanded="false">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
                     <div class="timeline-header">
@@ -657,12 +657,104 @@
     </div>
 </section>
 
+<!-- Photo Gallery Section -->
+<section id="gallery" class="gallery section">
+    <div class="container">
+        <h2 class="section-title">Visual Journey</h2>
+        <p class="section-intro">
+            From research presentations to working prototypes—moments that define the path from clinical observation to digital innovation.
+        </p>
+
+        <!-- Row 1: Professional Moments -->
+        <div class="gallery-category">
+            <h3 class="gallery-category-title">Research & Recognition</h3>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-lightbox="professional">
+                    <img src="/images/gallery/poster-award.jpg" alt="Luigi A. Moretti receiving Best Student Poster Award at Multimodal AI Workshop" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">🏆 Best Poster Award</span>
+                        <span class="gallery-detail">Multimodal AI Workshop, June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-lightbox="professional">
+                    <img src="/images/gallery/conference-presentation.jpeg" alt="Luigi presenting MEMoPAD research at Digital Mental Health Conference, Bristol university" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">🎤  "AI in Precision Psychiatry"</span>
+                        <span class="gallery-detail">Elizabeth Blackwell Institute, University of Bristol, October 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-lightbox="professional">
+                    <img src="/images/gallery/graduation.webp" alt="Luigi graduating with a Master's degree in health technology, with distinction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">🎓 MSc Graduation in Health Technologies</span>
+                        <span class="gallery-detail">UWE Bristol, 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Digital Products -->
+        <div class="gallery-category">
+            <h3 class="gallery-category-title">Products & Prototypes</h3>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-lightbox="products">
+                    <img src="/images/gallery/memopad-ecosystem.png" alt="MEMoPAD mobile app interface showing emotion tracking and sensor data visualization" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">MEMoPAD ecosystem</span>
+                        <span class="gallery-detail">💻⌚📱 Smartphone, wearable, and web app</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-lightbox="products">
+                    <img src="/images/gallery/intellihearts.webp" alt="IntelliHearts wearable ECG device with emotion recognition feature" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">⌚📱 IntelliHearts Wearable</span>
+                        <span class="gallery-detail">1-lead ECG + emotion detection</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-lightbox="products">
+                    <img src="/images/gallery/myhealthdata.webp" alt="MEMoPAD clinician dashboard displaying patient emotion data and trends" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">📱 My Health Data (MyHD)</span>
+                        <span class="gallery-detail">Health data always with you</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <img class="lightbox-image" id="lightbox-img" src="" alt="">
+    <div class="lightbox-info">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <p class="lightbox-detail" id="lightbox-detail"></p>
+    </div>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-image" id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
 <!-- Achievements Gallery Section -->
 <section id="achievements" class="achievements section">
     <div class="container">
         <h2 class="section-title">Achievements & Recognition</h2>
         <p class="section-intro">
-            Funding secured, awards won, and milestones reached throughout the research journey.
+            Funding secured, awards won, and milestones reached throughout the career journey so far.
         </p>
         
         <!-- Filter Tabs -->
@@ -733,6 +825,15 @@
                 </div>
             </div>
             
+            <div class="achievement-card" data-category="awards" data-date="2024-05">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Research visit sponsorship</h3>
+                    <p class="achievement-detail">University of Bristol</p>
+                    <p class="achievement-date">May-Oct 2024</p>
+                </div>
+            </div>
+            
             <div class="achievement-card" data-category="awards" data-date="2021-08">
                 <div class="achievement-icon">🏆</div>
                 <div class="achievement-content">
@@ -750,7 +851,25 @@
                     <p class="achievement-date">2021</p>
                 </div>
             </div>
+
+            <div class="achievement-card" data-category="awards" data-date="2019-10">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">StartCup Apulia 2019 winner</h3>
+                    <p class="achievement-detail">MyHealthData (MyHD) startup pitch</p>
+                    <p class="achievement-date">2019</p>
+                </div>
+            </div>
             
+            <div class="achievement-card" data-category="awards" data-date="2018-09">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Winner Hackathon Medical Device Design</h3>
+                    <p class="achievement-detail">PREDICT & BaLab: Mistral</p>
+                    <p class="achievement-date">2018</p>
+                </div>
+            </div>
+
             <!-- Publications -->
             <div class="achievement-card" data-category="publications" data-date="2025-11">
                 <div class="achievement-icon">📄</div>
@@ -891,7 +1010,7 @@
                         </li>
                         <li>
                             <span class="list-icon">🔬</span>
-                            <span>Research Scientist positions in affective computing & biosignal processing</span>
+                            <span>Research Scientist positions in affective computing & digital health</span>
                         </li>
                         <li>
                             <span class="list-icon">🤝</span>
@@ -909,7 +1028,11 @@
                         </li>
                         <li>
                             <span class="list-icon">🇪🇺</span>
-                            <span>European Union (Switzerland, Germany)</span>
+                            <span>European Union (NL, DE, etc)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">🇨🇭</span>
+                            <span>Switzerland</span>
                         </li>
                         <li>
                             <span class="list-icon">🇺🇸</span>
@@ -970,13 +1093,22 @@
                 <a href="https://memopad.luigiandreamoretti.com/newsletter/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Subscribe</a>
             </div>
         </div>
+
+            <div class="footer-column">
+                <h4>About This Site</h4>
+                <p class="footer-description">
+                    Built with AI assistance to focus time on what matters: health innovation and research. 
+                    Human-directed, AI-accelerated.
+                </p>
+            </div>
         
         <div class="footer-bottom">
             <p>&copy; 2025 Luigi A. Moretti. All rights reserved.</p>
             <p class="footer-meta">
                 Last updated: October 2025 •
+                <a href="/privacy.html">Privacy</a> • 
                 <a href="/sitemap.xml">Sitemap</a>
-            </p>
+    </p>
         </div>
     </div>
 </footer>
