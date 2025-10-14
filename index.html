@@ -41,161 +41,314 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
     
-    <!-- Schema.org structured data -->
+<!-- Enhanced Schema.org Structured Data -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Luigi A. Moretti",
-    "alternateName": "Luigi Andrea Moretti",
-    "jobTitle": "PhD Researcher in Wearable Mental Health Technology",
-    "description": "PhD candidate building wearable emotion monitoring systems for anxiety disorders. Medical doctor, health tech entrepreneur, and product manager specializing in affective computing and digital mental health.",
-    "url": "https://luigiandreamoretti.com",
-    "email": "hello@luigimoretti.com",
-    "image": "https://luigiandreamoretti.com/images/hero-linkedin.webp",
-    
-    "sameAs": [
-        "https://www.linkedin.com/in/luigiandreamoretti/",
-        "https://memopad.luigiandreamoretti.com/",
-        "https://scholar.google.co.uk/citations?user=KJTGED4AAAAJ",
-        "https://github.com/LuigiAM",
-        "https://www.researchgate.net/profile/Luigi-Moretti-2",
-        "https://x.com/LuigiAndreaM",
-        "https://orcid.org/my-orcid?orcid=0009-0002-6180-0565"
-    ],
-    
-    "alumniOf": [
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://luigiandreamoretti.com/#person",
+            "name": "Luigi A. Moretti",
+            "alternateName": "Luigi Andrea Moretti",
+            "jobTitle": "PhD Researcher in Wearable Mental Health Technology",
+            "description": "PhD candidate building wearable emotion monitoring systems for anxiety disorders. Medical doctor, health tech entrepreneur, and product manager specializing in affective computing and digital mental health.",
+            "url": "https://luigiandreamoretti.com",
+            "email": "hello@luigimoretti.com",
+            "image": "https://luigiandreamoretti.com/images/hero-linkedin.webp",
+            
+            "sameAs": [
+                "https://www.linkedin.com/in/luigiandreamoretti/",
+                "https://memopad.luigiandreamoretti.com/",
+                "https://scholar.google.co.uk/citations?user=KJTGED4AAAAJ",
+                "https://github.com/LuigiAM",
+                "https://www.researchgate.net/profile/Luigi-Moretti-2",
+                "https://x.com/LuigiAndreaM",
+                "https://orcid.org/0009-0002-6180-0565"
+            ],
+            
+            "worksFor": {
+                "@id": "https://www.uwe.ac.uk/#organization"
+            },
+            
+            "mainEntityOfPage": {
+                "@id": "https://luigiandreamoretti.com/#website"
+            },
+            
+            "alumniOf": [
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "University of the West of England, Bristol",
+                    "sameAs": "https://www.uwe.ac.uk/"
+                },
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "University of Bari Aldo Moro",
+                    "sameAs": "https://www.uniba.it/"
+                }
+            ],
+            
+            "affiliation": [
+                {
+                    "@id": "https://www.uwe.ac.uk/#organization"
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Experimental Psychology Society",
+                    "url": "https://eps.ac.uk/"
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Innovate Healthier Together",
+                    "url": "https://www.arc-swp.nihr.ac.uk/research-and-implementation/public-involvement/iht/"
+                }
+            ],
+            
+            "knowsAbout": [
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Wearable Technology",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Wearable_computer"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Mental Health",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Mental_health"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Affective Computing",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Affective_computing"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Product Management",
+                    "sameAs": "https://en.wikipedia.org/wiki/Product_management"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Digital Health",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Digital_health"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Emotion Recognition",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Emotion_recognition"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Anxiety Disorders",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Anxiety_disorder"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Co-Design",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Participatory_design"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Biosignal Processing",
+                    "sameAs": "https://en.wikipedia.org/wiki/Biomedical_signal_processing"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Human-Computer Interaction",
+                    "sameAs": "https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction"
+                }
+            ],
+            
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": "PhD in Digital Health Technologies",
+                    "educationalLevel": "Doctoral",
+                    "about": {
+                        "@type": "DefinedTerm",
+                        "name": "Wearable Emotion Monitoring for Anxiety Disorders",
+                        "url": "https://memopad.luigiandreamoretti.com/research/"
+                    },
+                    "recognizedBy": {
+                        "@id": "https://www.uwe.ac.uk/#organization"
+                    }
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": "MSc Health Technology",
+                    "educationalLevel": "Master's",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "University of Bari Aldo Moro"
+                    }
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": "MD (Medical Doctor)",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "University of Bari Aldo Moro"
+                    }
+                }
+            ],
+            
+            "memberOf": [
+                {
+                    "@type": "Organization",
+                    "name": "Experimental Psychology Society",
+                    "url": "https://eps.ac.uk/",
+                    "member": {
+                        "@id": "https://luigiandreamoretti.com/#person"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Innovate Healthier Together",
+                    "url": "https://www.arc-swp.nihr.ac.uk/research-and-implementation/public-involvement/iht/",
+                    "member": {
+                        "@id": "https://luigiandreamoretti.com/#person"
+                    }
+                }
+            ],
+            
+            "award": [
+                {
+                    "@type": "Award",
+                    "name": "Best Student Poster Award",
+                    "description": "Multimodal AI Workshop 2024",
+                    "date": "2024-06"
+                },
+                {
+                    "@type": "Award",
+                    "name": "Top 10 Finalist",
+                    "description": "ADB/Agorize COVID-19 Vaccine Safety Monitoring Competition",
+                    "date": "2021"
+                },
+                {
+                    "@type": "Award",
+                    "name": "Semi-finalist",
+                    "description": "Webit 2021 Conference",
+                    "date": "2021"
+                }
+            ],
+            
+            "seeks": {
+                "@type": "Occupation",
+                "name": "Product Management or Research Scientist Role",
+                "occupationLocation": [
+                    {
+                        "@type": "Country",
+                        "name": "United Kingdom"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Switzerland"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Germany"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "United States"
+                    }
+                ],
+                "estimatedSalary": {
+                    "@type": "MonetaryAmountDistribution",
+                    "name": "Competitive"
+                },
+                "description": "Seeking opportunities in wearable health technology, digital mental health, or affective computing starting Fall 2026."
+            }
+        },
+        
+        {
+            "@type": "WebSite",
+            "@id": "https://luigiandreamoretti.com/#website",
+            "url": "https://luigiandreamoretti.com",
+            "name": "Luigi A. Moretti - Wearable Mental Health Technology Researcher",
+            "description": "Personal website of Luigi A. Moretti, PhD researcher building wearable emotion monitoring systems for anxiety disorders.",
+            "publisher": {
+                "@id": "https://luigiandreamoretti.com/#person"
+            },
+            "mainEntity": {
+                "@id": "https://luigiandreamoretti.com/#person"
+            },
+            "inLanguage": "en-GB"
+        },
+        
         {
             "@type": "EducationalOrganization",
+            "@id": "https://www.uwe.ac.uk/#organization",
             "name": "University of the West of England, Bristol",
-            "sameAs": "https://www.uwe.ac.uk/"
+            "url": "https://www.uwe.ac.uk/",
+            "sameAs": [
+                "https://en.wikipedia.org/wiki/University_of_the_West_of_England",
+                "https://www.wikidata.org/wiki/Q1480724"
+            ]
         },
+        
         {
-            "@type": "EducationalOrganization",
-            "name": "University of Bari Aldo Moro",
-            "sameAs": "https://www.uniba.it/"
-        }
-    ],
-    
-    "affiliation": [
-        {
-            "@type": "Organization",
-            "name": "University of the West of England, Bristol",
-            "url": "https://www.uwe.ac.uk/"
-        },
-        {
-            "@type": "Organization",
-            "name": "Experimental Psychology Society",
-            "url": "https://eps.ac.uk/"
-        },
-        {
-            "@type": "Organization",
-            "name": "Innovate Healthier Together",
-            "url": "https://www.arc-swp.nihr.ac.uk/research-and-implementation/public-involvement/iht/"
-        }
-    ],
-    
-    "knowsAbout": [
-        "Wearable Technology",
-        "Mental Health",
-        "Affective Computing",
-        "Product Management",
-        "Digital Health",
-        "Emotion Recognition",
-        "Anxiety Disorders",
-        "Co-Design Methodology",
-        "Biosignal Processing",
-        "Human-Computer Interaction",
-        "Clinical Research",
-        "Health Technology Assessment"
-    ],
-    
-    "hasCredential": [
-        {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "name": "PhD in Digital Health Technologies",
-            "educationalLevel": "Doctoral",
-            "recognizedBy": {
-                "@type": "Organization",
-                "name": "University of the West of England, Bristol"
-            }
-        },
-        {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "name": "MSc Health Technology",
-            "educationalLevel": "Master's",
-            "recognizedBy": {
-                "@type": "Organization",
-                "name": "University of Bari Aldo Moro"
-            }
-        },
-        {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "name": "MD (Medical Doctor)",
-            "educationalLevel": "Professional",
-            "recognizedBy": {
-                "@type": "Organization",
-                "name": "University of Bari Aldo Moro"
-            }
-        }
-    ],
-    
-    "memberOf": [
-        {
-            "@type": "Organization",
-            "name": "Experimental Psychology Society",
-            "membershipType": "Postgraduate Member"
-        },
-        {
-            "@type": "Organization",
-            "name": "Innovate Healthier Together",
-            "membershipType": "Fellow"
-        }
-    ],
-    
-    "award": [
-        "Best Student Poster Award - Multimodal AI Workshop 2024",
-        "Top 10 - ADB/Agorize COVID-19 Vaccine Safety Monitoring Competition",
-        "Semi-finalist - Webit 2021 Conference"
-    ],
-    
-    "seeks": {
-        "@type": "JobPosting",
-        "title": "Product Management or Research Scientist Role",
-        "description": "Seeking opportunities in wearable health technology, digital mental health, or affective computing. Open to PM roles, research scientist positions, and collaborative partnerships.",
-        "hiringOrganization": {
-            "@type": "Organization",
-            "name": "Various"
-        },
-        "jobLocation": [
-            {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "GB"
+            "@type": "ResearchProject",
+            "@id": "https://memopad.luigiandreamoretti.com/#project",
+            "name": "MEMoPAD",
+            "alternateName": "Multimodal Emotion Monitoring in Clinical Pathways for Anxiety Disorders",
+            "url": "https://memopad.luigiandreamoretti.com/",
+            "description": "A research project developing wearable emotion monitoring technology for anxiety disorders using Google Pixel Watch sensors and co-design methodology with patients, carers, and clinicians.",
+            "founder": {
+                "@id": "https://luigiandreamoretti.com/#person"
+            },
+            "parentOrganization": {
+                "@id": "https://www.uwe.ac.uk/#organization"
+            },
+            "funding": {
+                "@type": "Grant",
+                "funder": [
+                    {
+                        "@type": "Organization",
+                        "name": "NHS Bristol, North Somerset and South Gloucestershire ICB"
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "UWE Bristol CATE"
+                    }
+                ],
+                "amount": {
+                    "@type": "MonetaryAmount",
+                    "currency": "GBP",
+                    "value": "7500"
                 }
             },
-            {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressRegion": "EU"
+            "about": [
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Affective Computing",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Affective_computing"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Anxiety Disorders",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Anxiety_disorder"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Wearable Technology",
+                    "url": "https://memopad.luigiandreamoretti.com/research/",
+                    "sameAs": "https://en.wikipedia.org/wiki/Wearable_computer"
                 }
-            },
-            {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "US"
-                }
-            }
-        ],
-        "datePosted": "2025-10-13",
-        "validThrough": "2026-10-01"
-    }
+            ]
+        }
+    ]
 }
 </script>
 
