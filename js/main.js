@@ -218,115 +218,77 @@ document.querySelectorAll('.timeline-header').forEach(header => {
     });
 })();
 
-// ===== ACHIEVEMENTS FILTER + SHOW MORE/LESS (COMPLETE FIX) =====
+// ===== ACHIEVEMENTS FILTER + SHOW MORE/LESS (Corrected Logic) =====
 (function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const achievementCards = document.querySelectorAll('.achievement-card');
     const achievementsGrid = document.querySelector('.achievements-grid');
     const showMoreBtn = document.querySelector('.show-more-btn');
     
+    // Initial check for required elements
     if (!achievementsGrid || !showMoreBtn) return;
-    
+
+    // STEP 1: Get all cards, convert to an array, and sort them immediately.
+    // This sorted array will be our single source of truth.
+    const sortedCards = Array.from(document.querySelectorAll('.achievement-card'))
+        .sort((a, b) => {
+            const dateA = a.getAttribute('data-date') || '0000-00';
+            const dateB = b.getAttribute('data-date') || '0000-00';
+            return dateB.localeCompare(dateA); // Newest first
+        });
+
+    // STEP 2: Re-order the cards in the DOM to match the sorted order.
+    // This ensures the visual order is always correct.
+    sortedCards.forEach(card => achievementsGrid.appendChild(card));
+
     let currentFilter = 'all';
     let isExpanded = false;
     const CARDS_PER_PAGE = 6;
 
-    // Sort cards by date (newest first)
-    function sortAchievements() {
-        const cardsArray = Array.from(achievementCards);
-        cardsArray.sort((a, b) => {
-            const dateA = a.getAttribute('data-date') || '0000-00';
-            const dateB = b.getAttribute('data-date') || '0000-00';
-            return dateB.localeCompare(dateA);
-        });
-        cardsArray.forEach(card => achievementsGrid.appendChild(card));
-    }
-
-    // Get visible cards for current filter
-    function getVisibleCards() {
-        return Array.from(achievementCards).filter(card => {
-            const category = card.getAttribute('data-category');
-            return currentFilter === 'all' || category === currentFilter;
-        });
-    }
-
-    // Update card visibility
     function updateCardVisibility() {
-        const visibleCards = getVisibleCards();
-        const totalVisible = visibleCards.length;
-
-        achievementCards.forEach(card => {
-            card.style.display = 'none';
-            card.style.opacity = '0';
+        // STEP 3: Filter from our pre-sorted array, not the original DOM order.
+        const visibleCards = sortedCards.filter(card => {
+            return currentFilter === 'all' || card.getAttribute('data-category') === currentFilter;
         });
 
+        // Hide all cards first
+        sortedCards.forEach(card => card.style.display = 'none');
+
+        // Determine which cards to show based on the "isExpanded" state
         const cardsToShow = isExpanded ? visibleCards : visibleCards.slice(0, CARDS_PER_PAGE);
-        
-        cardsToShow.forEach((card, index) => {
-            card.style.display = 'flex';
-            setTimeout(() => {
-                card.style.opacity = '1';
-            }, 10 * index);
-        });
+        cardsToShow.forEach(card => card.style.display = 'flex');
 
-        // Update button
-        if (totalVisible > CARDS_PER_PAGE) {
+        // Update the "Show More" button visibility and text
+        if (visibleCards.length > CARDS_PER_PAGE) {
             showMoreBtn.style.display = 'inline-flex';
-            updateButtonText();
+            const svgUp = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle; transform: rotate(180deg);"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+            const svgDown = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle;"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+            showMoreBtn.innerHTML = isExpanded ? `Show Less ${svgUp}` : `Show More ${svgDown}`;
         } else {
             showMoreBtn.style.display = 'none';
         }
     }
 
-    // Update button text and icon
-    function updateButtonText() {
-        if (isExpanded) {
-            showMoreBtn.innerHTML = `
-                Show Less 
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle; transform: rotate(180deg);">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            `;
-        } else {
-            showMoreBtn.innerHTML = `
-                Show More 
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle;">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            `;
-        }
-    }
-
-    // Filter button clicks
+    // Event listener for filter buttons
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             currentFilter = this.getAttribute('data-filter');
-            isExpanded = false;
-            
+            isExpanded = false; // Reset to compressed view on new filter
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
             updateCardVisibility();
         });
     });
 
-    // Show More/Less button
-    showMoreBtn.addEventListener('click', function() {
+    // Event listener for the "Show More/Less" button
+    showMoreBtn.addEventListener('click', () => {
         isExpanded = !isExpanded;
         updateCardVisibility();
-        
+        // Scroll to the top of the section when collapsing the view
         if (!isExpanded) {
-            // Scroll back to achievements section when collapsing
-            setTimeout(() => {
-                document.querySelector('#achievements').scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
-                });
-            }, 100);
+            document.querySelector('#achievements').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 
-    // Initialize
-    sortAchievements();
+    // Initialize the view on page load
     updateCardVisibility();
 })();
