@@ -84,10 +84,11 @@ h3 { font-size: 1.75rem; }
     transition: top var(--transition-base);
 }
 
-.navbar { z-index: 1000; }
-.nav-links { z-index: 999; }
-.nav-overlay { z-index: 998; }
-.nav-toggle { z-index: 1001; }
+/* Replace the old z-index block with this one */
+.navbar { z-index: 1010; }
+.nav-overlay { z-index: 1000; }
+.nav-links { z-index: 1020; }
+.nav-toggle { z-index: 1030; }
 
 .navbar.visible {
     top: 0;
@@ -386,9 +387,7 @@ h3 { font-size: 1.75rem; }
         justify-content: center;
     }
     
-    .nav-links {
-        display: none;
-    }
+
     
     .nav-toggle {
         display: flex;
@@ -2006,6 +2005,7 @@ h3 { font-size: 1.75rem; }
     }
 
     .nav-links {
+        display: flex; /* <-- ADD THIS LINE */
         position: fixed;
         top: 0;
         right: -100%;
