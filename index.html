@@ -373,14 +373,54 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="about-visual">
-                <div class="conference-image-wrapper">
-                    <img src="/images/conference-presentation.webp" 
-                         alt="Luigi A. Moretti presenting MEMoPAD research on affective computing for anxiety disorders at Digital Mental Health Conference, Ulster University" 
-                         class="conference-image"
-                         loading="lazy">
-                    <div class="image-caption">
-                        <span class="caption-icon">🎤</span>
-                        <span class="caption-text">Presenting MEMoPAD research at Digital Mental Health Conference, Ulster University - 2024</span>
+                <div class="about-slideshow">
+                    <div class="slideshow-track">
+                        <div class="slideshow-slide active">
+                            <img src="/images/conference-presentation.webp"
+                                 alt="Luigi A. Moretti presenting MEMoPAD research on affective computing for anxiety disorders at Digital Mental Health Conference, Ulster University"
+                                 class="conference-image"
+                                 loading="lazy">
+                            <div class="image-caption">
+                                <span class="caption-icon">🎤</span>
+                                <span class="caption-text">Presenting MEMoPAD research at Digital Mental Health Conference, Ulster University - 2024</span>
+                            </div>
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="/images/gallery/poster-award.jpg"
+                                 alt="Luigi A. Moretti receiving Best Student Poster Award at Multimodal AI Workshop"
+                                 class="conference-image"
+                                 loading="lazy">
+                            <div class="image-caption">
+                                <span class="caption-icon">🏆</span>
+                                <span class="caption-text">Best Student Poster Award, Multimodal AI Workshop - June 2024</span>
+                            </div>
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="/images/gallery/conference-presentation.jpeg"
+                                 alt="Luigi A. Moretti presenting AI in Precision Psychiatry at Elizabeth Blackwell Institute, University of Bristol"
+                                 class="conference-image"
+                                 loading="lazy">
+                            <div class="image-caption">
+                                <span class="caption-icon">🎤</span>
+                                <span class="caption-text">AI in Precision Psychiatry, Elizabeth Blackwell Institute, University of Bristol - October 2024</span>
+                            </div>
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="/images/gallery/graduation.webp"
+                                 alt="Luigi A. Moretti graduating with MSc in Health Technologies with distinction from UWE Bristol"
+                                 class="conference-image"
+                                 loading="lazy">
+                            <div class="image-caption">
+                                <span class="caption-icon">🎓</span>
+                                <span class="caption-text">MSc Graduation in Health Technologies, UWE Bristol - 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slideshow-dots">
+                        <button class="slideshow-dot active" data-slide="0" aria-label="Slide 1"></button>
+                        <button class="slideshow-dot" data-slide="1" aria-label="Slide 2"></button>
+                        <button class="slideshow-dot" data-slide="2" aria-label="Slide 3"></button>
+                        <button class="slideshow-dot" data-slide="3" aria-label="Slide 4"></button>
                     </div>
                 </div>
                 
@@ -456,7 +496,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 
                 <div class="metric-card metric-community">
                     <div class="metric-icon">📬</div>
-                    <div class="metric-value">400+</div>
+                    <div class="metric-value">450+</div>
                     <div class="metric-label">Newsletter Subscribers</div>
                     <div class="metric-detail">Monthly project updates</div>
                 </div>
@@ -465,11 +505,11 @@ I blend competencies too often kept separate: clinical insight, technical execut
         
         <div class="spotlight-demo">
             <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/_ZfFJO2GutQ" 
-                    title="MEMoPAD Mobile App Demo - Patient Interface" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/9uJHqtzO6cw"
+                    title="MEMoPAD Project Overview"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                     loading="lazy">
                 </iframe>
@@ -873,66 +913,170 @@ I blend competencies too often kept separate: clinical insight, technical execut
             From research presentations to working prototypes. Moments that define the path from clinical practice to digital innovation.
         </p>
 
-        <!-- Row 1: Professional Moments -->
+        <!-- Row 1: Products & Prototypes (images with Watch in Action button) -->
         <div class="gallery-category">
-            <h3 class="gallery-category-title">Research & Recognition</h3>
+            <h3 class="gallery-category-title">Products & Prototypes</h3>
 
-            <div class="gallery-grid">
-                <div class="gallery-item" data-lightbox="professional">
-                    <img src="/images/gallery/poster-award.jpg" alt="Luigi A. Moretti receiving Best Student Poster Award at Multimodal AI Workshop" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption">🏆 Best Student Poster Award</span>
-                        <span class="gallery-detail">Multimodal AI Workshop, June 2024</span>
+            <div class="video-gallery-grid">
+                <div class="video-gallery-item product-card" data-video-id="_ZfFJO2GutQ">
+                    <div class="product-image-wrapper">
+                        <img src="/images/gallery/memopad-ecosystem.png" alt="MEMoPAD Ecosystem - smartphone, wearable, and web application" loading="lazy">
+                        <button class="watch-video-btn" aria-label="Watch MEMoPAD in action">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Watch in Action
+                        </button>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">MEMoPAD Ecosystem</h4>
+                        <p class="video-gallery-period">2023 - Present</p>
+                        <p class="video-gallery-detail">Smartphone, wearable, and web app for emotion monitoring in anxiety disorders</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-lightbox="professional">
-                    <img src="/images/gallery/conference-presentation.jpeg" alt="Luigi presenting MEMoPAD research at Digital Mental Health Conference, Bristol university" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption">🎤  "AI in Precision Psychiatry"</span>
-                        <span class="gallery-detail">Elizabeth Blackwell Institute, University of Bristol, October 2024</span>
+                <div class="video-gallery-item product-card" data-video-id="zCHwg8tJSfg">
+                    <div class="product-image-wrapper">
+                        <img src="/images/gallery/intellihearts.webp" alt="IntelliHearts wearable ECG cardiac monitoring device" loading="lazy">
+                        <button class="watch-video-btn" aria-label="Watch IntelliHearts in action">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Watch in Action
+                        </button>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">IntelliHearts Wearable</h4>
+                        <p class="video-gallery-period">2020 - 2021</p>
+                        <p class="video-gallery-detail">1-lead ECG cardiac monitoring with emotion detection feature</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-lightbox="professional">
-                    <img src="/images/gallery/graduation.webp" alt="Luigi graduating with a Master's degree in health technology, with distinction" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption">🎓 MSc Graduation in Health Technologies</span>
-                        <span class="gallery-detail">UWE Bristol, 2022</span>
+                <div class="video-gallery-item product-card" data-video-id="7WuJ8nFq-IE">
+                    <div class="product-image-wrapper">
+                        <img src="/images/gallery/myhealthdata.webp" alt="My Health Data (MyHD) personal health records application" loading="lazy">
+                        <button class="watch-video-btn" aria-label="Watch MyHD in action">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Watch in Action
+                        </button>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">My Health Data (MyHD)</h4>
+                        <p class="video-gallery-period">2018 - 2019</p>
+                        <p class="video-gallery-detail">Personal health records app - your health data always with you</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Row 2: Digital Products -->
+        <!-- Row 2: Pitches & Presentations (6 videos, newest first) -->
         <div class="gallery-category">
-            <h3 class="gallery-category-title">Products & Prototypes</h3>
+            <h3 class="gallery-category-title">Pitches & Presentations</h3>
 
-            <div class="gallery-grid">
-                <div class="gallery-item" data-lightbox="products">
-                    <img src="/images/gallery/memopad-ecosystem.png" alt="MEMoPAD mobile app interface showing emotion tracking and sensor data visualization" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption">MEMoPAD ecosystem (2023 - present)</span>
-                        <span class="gallery-detail">💻⌚📱 Smartphone, wearable, and web app</span>
+            <div class="video-gallery-grid video-gallery-grid--small">
+                <div class="video-gallery-item">
+                    <div class="video-gallery-wrapper">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/o7TnkdVPpYU"
+                            title="IntelliHearts Pitch at SMART Hackathon 2021"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">IntelliHearts @ SMART Hack</h4>
+                        <p class="video-gallery-period">2021</p>
+                        <p class="video-gallery-detail">Pitching IntelliHearts wearable at the SMART Hackathon</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-lightbox="products">
-                    <img src="/images/gallery/intellihearts.webp" alt="IntelliHearts wearable ECG device with emotion recognition feature" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption">⌚📱 IntelliHearts Wearable (2020-2021)</span>
-                        <span class="gallery-detail">1-lead ECG + emotion detection</span>
+                <div class="video-gallery-item">
+                    <div class="video-gallery-wrapper">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/IbaSnb76B48"
+                            title="Ortopedia3D Pitch at PNI 2020"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">Ortopedia3D @ PNI</h4>
+                        <p class="video-gallery-period">2020</p>
+                        <p class="video-gallery-detail">Presenting the healthtech startup I advised at Italy's innovation event</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-lightbox="products">
-                    <img src="/images/gallery/myhealthdata.webp" alt="MEMoPAD clinician dashboard displaying patient emotion data and trends" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption">📱 My Health Data (MyHD) (2018-2019)</span>
-                        <span class="gallery-detail">Health data always with you</span>
+                <div class="video-gallery-item">
+                    <div class="video-gallery-wrapper">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/ROP7yEk3eX4"
+                            title="MD Thesis Defense"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">MD Thesis Defense</h4>
+                        <p class="video-gallery-period">2020</p>
+                        <p class="video-gallery-detail">Defending my Medical Doctor thesis in Clinical Medicine</p>
                     </div>
                 </div>
 
+                <div class="video-gallery-item">
+                    <div class="video-gallery-wrapper">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/MvazwheY1DI"
+                            title="EIT Health Pharmaceutical Safety Song"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">EIT Health Song</h4>
+                        <p class="video-gallery-period">2019</p>
+                        <p class="video-gallery-detail">Song about the 7 drugs causing 90% of severe pharmaceutical incidents in Danish Healthcare</p>
+                    </div>
+                </div>
+
+                <div class="video-gallery-item">
+                    <div class="video-gallery-wrapper">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/by6M7d4co3M"
+                            title="MyHD Pitch at PNI 2019"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">MyHD @ PNI</h4>
+                        <p class="video-gallery-period">2019</p>
+                        <p class="video-gallery-detail">Pitching My Health Data at Italy's main research & innovation event</p>
+                    </div>
+                </div>
+
+                <div class="video-gallery-item">
+                    <div class="video-gallery-wrapper">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/qgrQpoOfOmw"
+                            title="Climb3D Promotional Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-gallery-info">
+                        <h4 class="video-gallery-title">Climb3D</h4>
+                        <p class="video-gallery-period">2018</p>
+                        <p class="video-gallery-detail">Professional promotional video for my first startup</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -950,11 +1094,16 @@ I blend competencies too often kept separate: clinical insight, technical execut
     <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
 </div>
 
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-image" id="lightbox-img" src="" alt="">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
+<!-- Video Modal (Products & Prototypes) -->
+<div class="video-modal" id="video-modal">
+    <button class="video-modal-close" aria-label="Close video">&times;</button>
+    <div class="video-modal-content">
+        <div class="video-modal-wrapper">
+            <iframe id="video-modal-iframe" src="" title="Product video" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
 </div>
 
 <!-- Achievements Gallery Section -->

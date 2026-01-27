@@ -292,3 +292,105 @@ document.querySelectorAll('.timeline-header').forEach(header => {
     // Initialize the view on page load
     updateCardVisibility();
 })();
+
+// ===== ABOUT SECTION SLIDESHOW =====
+(function() {
+    const slideshow = document.querySelector('.about-slideshow');
+    if (!slideshow) return;
+
+    const slides = slideshow.querySelectorAll('.slideshow-slide');
+    const dots = slideshow.querySelectorAll('.slideshow-dot');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    let interval = null;
+    const INTERVAL_MS = 5000;
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide((currentSlide + 1) % slides.length);
+    }
+
+    function startAutoPlay() {
+        if (interval) return;
+        interval = setInterval(nextSlide, INTERVAL_MS);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(interval);
+        interval = null;
+    }
+
+    // Dot navigation
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            const slideIndex = parseInt(this.getAttribute('data-slide'), 10);
+            goToSlide(slideIndex);
+            stopAutoPlay();
+            startAutoPlay();
+        });
+    });
+
+    // Pause on hover
+    slideshow.addEventListener('mouseenter', stopAutoPlay);
+    slideshow.addEventListener('mouseleave', startAutoPlay);
+
+    // Start
+    startAutoPlay();
+})();
+
+// ===== VIDEO MODAL (Products & Prototypes) =====
+(function() {
+    const modal = document.getElementById('video-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    const closeBtn = document.querySelector('.video-modal-close');
+    if (!modal || !iframe) return;
+
+    const productCards = document.querySelectorAll('.product-card');
+
+    function openModal(videoId) {
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    // Open on card click (image or button)
+    productCards.forEach(card => {
+        const videoId = card.getAttribute('data-video-id');
+        if (!videoId) return;
+
+        card.querySelector('.product-image-wrapper').addEventListener('click', function() {
+            openModal(videoId);
+        });
+    });
+
+    // Close handlers
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+})();
