@@ -222,7 +222,7 @@ document.querySelectorAll('.timeline-header').forEach(header => {
 (function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const achievementsGrid = document.querySelector('.achievements-grid');
-    const showMoreBtn = document.querySelector('.show-more-btn');
+    const showMoreBtn = document.querySelector('.achievements .show-more-btn');
     
     // Initial check for required elements
     if (!achievementsGrid || !showMoreBtn) return;
@@ -242,7 +242,7 @@ document.querySelectorAll('.timeline-header').forEach(header => {
 
     let currentFilter = 'all';
     let isExpanded = false;
-    const CARDS_PER_PAGE = 6;
+    const CARDS_PER_PAGE = 4;
 
     function updateCardVisibility() {
         // STEP 3: Filter from our pre-sorted array, not the original DOM order.
