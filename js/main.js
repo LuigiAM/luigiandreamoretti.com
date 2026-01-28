@@ -218,12 +218,12 @@ document.querySelectorAll('.timeline-header').forEach(header => {
     });
 })();
 
-// ===== ACHIEVEMENTS FILTER + SHOW MORE/LESS (Corrected Logic) =====
+// ===== ACHIEVEMENTS FILTER + SHOW MORE/LESS (Dynamic One Row) =====
 (function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const achievementsGrid = document.querySelector('.achievements-grid');
     const showMoreBtn = document.querySelector('.achievements .show-more-btn');
-    
+
     // Initial check for required elements
     if (!achievementsGrid || !showMoreBtn) return;
 
@@ -242,7 +242,19 @@ document.querySelectorAll('.timeline-header').forEach(header => {
 
     let currentFilter = 'all';
     let isExpanded = false;
-    const CARDS_PER_PAGE = 4;
+
+    // Calculate how many cards fit in one row based on grid layout
+    function getCardsPerRow() {
+        const gridWidth = achievementsGrid.offsetWidth;
+        const gap = 24; // 1.5rem = 24px (from CSS gap)
+        const minCardWidth = 300; // minmax(300px, 1fr) from CSS
+
+        // Calculate how many cards fit in one row
+        const cardsPerRow = Math.floor((gridWidth + gap) / (minCardWidth + gap));
+
+        // Ensure at least 1 card is shown
+        return Math.max(1, cardsPerRow);
+    }
 
     function updateCardVisibility() {
         // STEP 3: Filter from our pre-sorted array, not the original DOM order.
@@ -253,12 +265,15 @@ document.querySelectorAll('.timeline-header').forEach(header => {
         // Hide all cards first
         sortedCards.forEach(card => card.style.display = 'none');
 
+        // Dynamically calculate cards per row
+        const cardsPerRow = getCardsPerRow();
+
         // Determine which cards to show based on the "isExpanded" state
-        const cardsToShow = isExpanded ? visibleCards : visibleCards.slice(0, CARDS_PER_PAGE);
+        const cardsToShow = isExpanded ? visibleCards : visibleCards.slice(0, cardsPerRow);
         cardsToShow.forEach(card => card.style.display = 'flex');
 
         // Update the "Show More" button visibility and text
-        if (visibleCards.length > CARDS_PER_PAGE) {
+        if (visibleCards.length > cardsPerRow) {
             showMoreBtn.style.display = 'inline-flex';
             const svgUp = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle; transform: rotate(180deg);"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
             const svgDown = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem; vertical-align: middle;"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
@@ -287,6 +302,15 @@ document.querySelectorAll('.timeline-header').forEach(header => {
         if (!isExpanded) {
             document.querySelector('#achievements').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+    });
+
+    // Recalculate on window resize to handle screen size changes
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateCardVisibility();
+        }, 250); // Debounce resize events
     });
 
     // Initialize the view on page load
