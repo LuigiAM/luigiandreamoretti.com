@@ -1305,6 +1305,32 @@ h3 { font-size: 1.75rem; }
     }
 }
 
+/* ===== PROGRESSIVE DISCLOSURE - TIMELINE ===== */
+.timeline-item[data-initial-visible="false"] {
+    display: none;
+}
+
+.timeline-item[data-initial-visible="false"].visible {
+    display: block;
+    animation: slideDown 0.4s ease-out;
+}
+
+.timeline-show-more-container {
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.timeline-show-more-btn[aria-expanded="true"] .show-more-text {
+    display: none;
+}
+
+.timeline-show-more-btn[aria-expanded="true"] .show-less-text {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /* ===== PHOTO GALLERY SECTION ===== */
 .gallery {
     background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
@@ -1875,6 +1901,44 @@ h3 { font-size: 1.75rem; }
         font-size: 2rem;
     }
 }
+
+/* ===== PROGRESSIVE DISCLOSURE - PITCHES & PRESENTATIONS ===== */
+.video-gallery-item[data-initial-visible="false"] {
+    display: none;
+}
+
+.video-gallery-item[data-initial-visible="false"].visible {
+    display: block;
+    animation: slideDown 0.4s ease-out;
+}
+
+.pitches-show-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pitches-show-more-btn[aria-expanded="true"] .show-more-text {
+    display: none;
+}
+
+.pitches-show-more-btn[aria-expanded="true"] .show-less-text {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Slide-down animation for both sections */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ===== ACHIEVEMENTS GALLERY SECTION ===== */
 .achievements {

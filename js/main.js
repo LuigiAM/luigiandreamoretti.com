@@ -394,3 +394,68 @@ document.querySelectorAll('.timeline-header').forEach(header => {
         }
     });
 })();
+
+// ===== EXPERIENCE TIMELINE - SHOW MORE =====
+(function() {
+    const btn = document.querySelector('.timeline-show-more-btn');
+    if (!btn) return;
+
+    const hiddenItems = document.querySelectorAll('.timeline-item[data-initial-visible="false"]');
+    if (hiddenItems.length === 0) return;
+
+    btn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+        if (!isExpanded) {
+            // Show hidden items
+            hiddenItems.forEach(item => item.classList.add('visible'));
+            this.setAttribute('aria-expanded', 'true');
+        } else {
+            // Hide items again
+            hiddenItems.forEach(item => item.classList.remove('visible'));
+            this.setAttribute('aria-expanded', 'false');
+
+            // Smooth scroll back to top of Experience section
+            const experienceSection = document.getElementById('experience');
+            if (experienceSection) {
+                experienceSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+})();
+
+// ===== PITCHES & PRESENTATIONS - SHOW MORE =====
+(function() {
+    const btn = document.querySelector('.pitches-show-more-btn');
+    if (!btn) return;
+
+    const hiddenItems = document.querySelectorAll('.video-gallery-item[data-initial-visible="false"]');
+    if (hiddenItems.length === 0) return;
+
+    btn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+        if (!isExpanded) {
+            // Show hidden items
+            hiddenItems.forEach(item => item.classList.add('visible'));
+            this.setAttribute('aria-expanded', 'true');
+        } else {
+            // Hide items again
+            hiddenItems.forEach(item => item.classList.remove('visible'));
+            this.setAttribute('aria-expanded', 'false');
+
+            // Smooth scroll to Pitches area (Visual Journey section + offset)
+            const gallerySection = document.getElementById('gallery');
+            if (gallerySection) {
+                const pitchesSection = document.querySelector('.gallery-category:nth-child(2)');
+                if (pitchesSection) {
+                    pitchesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    // Fallback: scroll to gallery with offset
+                    const offset = gallerySection.offsetTop + 400;
+                    window.scrollTo({ top: offset, behavior: 'smooth' });
+                }
+            }
+        }
+    });
+})();
