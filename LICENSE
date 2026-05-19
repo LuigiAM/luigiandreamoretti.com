@@ -1,0 +1,59 @@
+SCOPE
+=====
+
+This LICENSE file applies ONLY to the software components of this repository.
+
+In scope (MIT License, below):
+- Stylesheets (css/style.css)
+- JavaScript code (js/main.js)
+- HTML structural scaffolding: the semantic markup, <head> configuration,
+  Schema.org JSON-LD structural setup (@context, @graph, @type declarations),
+  and any generic template structure in index.html and privacy.html
+- Build / tooling configuration files (.gitignore, sitemap.xml, robots.txt)
+
+Out of scope (all rights reserved — see NOTICE.md):
+- All written content and prose authored within index.html and privacy.html
+  (including bio, About section, experience descriptions, achievements text,
+  taglines, page copy, alt text, meta descriptions)
+- The textual VALUES inside Schema.org JSON-LD (e.g., description, jobTitle,
+  knowsAbout entries, alumniOf details, affiliation text) — the structure is
+  MIT, the content authored within it is not
+- The name "Luigi A. Moretti" used as a personal identifier on this site
+- All images, graphics, illustrations, and photographs under public/ and
+  images/ (including hero images, gallery photos, conference photos,
+  achievement images, favicons, and open-graph images)
+- Third-party logos under images/logos/ (used by permission or under
+  fair-dealing exceptions; remain the property of their respective owners)
+- MEMoPAD-related imagery appearing on this site, which is additionally
+  subject to the rights statement in the MEMoPAD repository
+  (https://github.com/LuigiAM/PhD_project_website) and pending UK registered
+  design protection — see NOTICE.md §2.5
+
+For permissions on out-of-scope materials, contact:
+hello@luigimoretti.com
+
+See NOTICE.md for the complete scope breakdown.
+
+================================================================================
+
+MIT License
+
+Copyright (c) 2025-2026 Luigi A. Moretti
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
