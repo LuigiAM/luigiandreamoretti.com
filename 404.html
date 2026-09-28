@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Luigi A. Moretti</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .not-found {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: var(--gradient-hero);
+            color: white;
+        }
+        .not-found h1 {
+            color: white;
+            font-size: 5rem;
+            margin-bottom: 0.5rem;
+        }
+        .not-found p {
+            font-size: 1.25rem;
+            max-width: 520px;
+            margin-bottom: 2.5rem;
+        }
+        .not-found-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 640px) {
+            .not-found h1 {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="not-found">
+        <h1>404</h1>
+        <p>Sorry, this page doesn't exist. It may have moved, or the link may be mistyped.</p>
+        <div class="not-found-cta">
+            <a href="/" class="btn btn-secondary">Back to Homepage</a>
+            <a href="/#availability" class="btn btn-secondary">Get in Touch</a>
+        </div>
+    </main>
+</body>
+</html>

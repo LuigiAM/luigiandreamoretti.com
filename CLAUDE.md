@@ -1,6 +1,6 @@
 # Luigi A. Moretti - Personal Website Context
 
-**Last Updated:** October 2025  
+**Last Updated:** September 2026  
 **Website URL:** https://luigiandreamoretti.com  
 **Version:** 1.0 (Cloudflare Pages deployment)
 
@@ -17,9 +17,9 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 
 ### Design Philosophy
 - **Professional yet approachable** - Warm, human tone balanced with technical credibility
-- **Evidence-based storytelling** - Quantified achievements (87+ participants, £7.5K funding) over vague claims
+- **Evidence-based storytelling** - Quantified achievements (6/7 co-design phases, 19-25 participants per phase, £10.5K funding, 600+ newsletter subscribers) over vague claims
 - **Unique positioning** - Emphasizes rare combination of clinical insight (MD), technical execution (startup experience), and academic rigor (PhD)
-- **Action-oriented** - Clear CTAs for recruiters (Available Fall 2026), collaborators (MEMoPAD Project), and connections (LinkedIn)
+- **Action-oriented** - Clear CTAs for recruiters (Download CV, "Open to new roles"), collaborators (MEMoPAD Project), and connections (LinkedIn)
 
 ---
 
@@ -27,7 +27,7 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 
 ### Hosting & Deployment
 - **Platform:** Cloudflare Pages (migrated from Firebase Hosting Oct 2025)
-- **Deployment:** Automatic via GitHub push to `master` branch
+- **Deployment:** Automatic via GitHub push to `main` branch (other branches get Cloudflare preview URLs)
 - **Repository:** https://github.com/LuigiAM/luigiandreamoretti.com
 - **Domain:** luigiandreamoretti.com (managed via Cloudflare DNS)
 - **SSL:** Automatic HTTPS enforcement, www → non-www redirects via Page Rules
@@ -36,23 +36,29 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 - **HTML5** - Semantic markup with accessibility considerations
 - **CSS3** - Custom properties (CSS variables), responsive design, mobile-first approach
 - **Vanilla JavaScript** - No frameworks; progressive enhancement for core functionality
-- **No external dependencies** - Self-contained for performance and maintainability
+- **No external dependencies** - Self-contained for performance and maintainability (Inter font self-hosted in `/fonts/`; YouTube loads only on click)
 
 ### Key Files Structure
 ```
 /
-├── index.html              # Single-page application
-├── style.css               # All styling (no preprocessor)
-├── main.js                 # Interactive features
-├── privacy.html            # Privacy policy (required for professional site)
-├── sitemap.xml             # SEO sitemap
-├── robots.txt              # Search engine directives
-├── /images/                # WebP images (optimized for performance)
-│   ├── hero-linkedin.webp
-│   ├── hero-conference.webp
-│   └── gallery/*.webp
-├── /favicon/               # Multi-platform favicons
-└── CNAME                   # GitHub Pages compatibility (legacy)
+├── index.html              # Single-page site
+├── privacy.html            # Privacy policy (served at /privacy)
+├── 404.html                # Not-found page (prevents SPA soft-404s on Cloudflare Pages)
+├── _headers                # Cloudflare Pages security + cache headers
+├── robots.txt              # Search engine directives (must stay at repo root)
+├── sitemap.xml             # SEO sitemap (update <lastmod> on content changes)
+├── favicon.ico             # 16/32/48px favicon (root, for Google results)
+├── Luigi-Andrea-Moretti-CV.pdf  # Downloadable CV (hero + availability CTAs)
+├── css/style.css           # All styling (no preprocessor)
+├── js/main.js              # Interactive features (one IIFE per feature)
+├── fonts/                  # Self-hosted Inter (latin + latin-ext woff2, OFL.txt)
+├── images/                 # WebP images, resized to ~2x display size
+│   ├── og-image.jpg        # 1200x630 social preview (LinkedIn / X)
+│   ├── hero-linkedin.webp  # 800px (+ hero-linkedin-400.webp for srcset)
+│   ├── gallery/*.webp
+│   ├── logos/*.webp        # 160px max
+│   └── video-thumbs/*.webp # Self-hosted YouTube thumbnails (click-to-load)
+└── favicon/                # PNG favicons + apple-touch-icon
 ```
 
 ### Performance Targets
@@ -80,7 +86,7 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 - Differentiates from pure engineers or academics
 
 **2. User-Centered Rigor**
-> "87+ co-design participants ensure research translates to real-world use"
+> "7-phase co-design (19-25 patients, carers and clinicians per phase) ensures research translates to real-world use"
 - Emphasizes methodological thoroughness
 - Demonstrates commitment to stakeholder inclusion
 
@@ -153,20 +159,21 @@ All should point to `https://luigiandreamoretti.com`:
 
 ### Color Palette
 ```css
---color-primary: #41A08D     /* Teal-green (brand color, MEMoPAD alignment) */
---color-secondary: #2C3E50   /* Dark blue-gray (text, headers) */
---color-accent: #E74C3C      /* Red (CTAs, highlights) */
---color-light: #F5F0E6       /* Warm beige (backgrounds) */
---color-dark: #1A1A1A        /* Near-black (body text) */
---color-gray: #7F8C8D        /* Mid-gray (secondary text) */
+/* Actual tokens in css/style.css :root */
+--color-primary: #41A08D         /* Teal-green brand colour (large/decorative use only) */
+--color-primary-strong: #2E7D6E  /* AA-compliant teal (4.9:1 on white): buttons, links, small text */
+--color-accent: #E74C3C          /* Red */
+--color-accent-2: #6C5CE7        /* Purple (gradient end) */
+--color-dark / --color-text: #2C3E50  /* Headings and body text */
+--color-text-muted: #6C757D
+--color-bg: #FFFFFF / --color-bg-light: #F8F9FA
+--gradient-hero: linear-gradient(135deg, #2E7D6E 0%, #6C5CE7 100%)  /* hero + availability */
 ```
 
 **Usage principles:**
-- Primary color: CTAs, links, section accents
-- Secondary: Headers, important text
-- Accent: Limited to high-priority actions (Available Fall 2026 badge)
-- Light: Backgrounds, card surfaces
-- Avoid pure white (#FFFFFF) - use warm beige for softer aesthetic
+- Use `--color-primary-strong` for any teal text or button background; `--color-primary` (#41A08D) is only ~3.2:1 on white and fails WCAG AA for normal-size text
+- White text on `--gradient-hero` is AA-compliant (the gradient starts at the strong teal on purpose)
+- Accent: limited to high-priority highlights
 
 ### Typography
 ```css
@@ -222,13 +229,14 @@ All should point to `https://luigiandreamoretti.com`:
 ## 6. Interactive Features
 
 ### Implemented
-1. **Sticky Navigation** - Appears on scroll down, fades on scroll up
-2. **Mobile Hamburger Menu** - Slide-in drawer with overlay, closes on link click or ESC key
-3. **Experience Timeline** - Click to expand/collapse job details
-4. **Achievements Filter** - Category tabs (All, Funding, Awards, Publications, Community)
-5. **Photo Gallery Lightbox** - Click to enlarge with navigation arrows, ESC to close
-6. **Smooth Scrolling** - Anchor links animate to sections
-7. **Availability Status** - Pulsing green dot animation on "Available Fall 2026" badge
+1. **Navigation** - Always visible; transparent over the hero, solid (`.scrolled`) after 50px; active section highlighted via `aria-current`
+2. **Mobile Hamburger Menu** - Slide-in drawer with overlay, closes on link click or ESC key (`aria-expanded` kept in sync)
+3. **Experience Timeline** - Click to expand/collapse job details; "Show More Roles" progressive disclosure
+4. **Achievements Filter** - Category tabs (All, Funding, Awards, Publications, Memberships, Speaking), one row by default + "Show All N"
+5. **About Slideshow** - Autoplay with pause/play button, swipe, pauses on hover/focus; no autoplay with reduced motion
+6. **Click-to-load Videos** - Self-hosted thumbnails (`.video-thumb` / `.product-card` with `data-video-id`) open YouTube in a native `<dialog>`
+7. **Smooth Scrolling** - CSS `scroll-behavior` + `scroll-margin-top` (no JS); disabled under `prefers-reduced-motion`
+8. **Availability Status** - Pulsing green dot on the "Open to new roles" badge
 
 ### JavaScript Architecture
 - **Modular pattern** - Each feature wrapped in IIFE (Immediately Invoked Function Expression)
@@ -238,9 +246,8 @@ All should point to `https://luigiandreamoretti.com`:
 - **Accessibility** - Keyboard navigation, focus management, ARIA attributes
 
 ### Known Issues (To Fix)
-- **Mobile menu** - Hamburger icon not triggering menu open (requires debug)
-  - Likely causes: Event listener timing, overlay element missing, z-index conflict
-  - Temporary workaround: Desktop navigation works, mobile users can still access via direct scrolling
+- **Mobile menu** - Previously broken. Fixed Sep 2026 by moving the navbar's `backdrop-filter` to `.navbar::before` (a `backdrop-filter` on `.navbar` made the fixed drawer position relative to the navbar) and making the navbar visible at page load. Verify on real iOS/Android devices.
+- **CSP** - `_headers` ships `Content-Security-Policy-Report-Only`; switch to enforcing once the preview deploy shows no violations.
 
 ---
 
@@ -301,7 +308,8 @@ All should point to `https://luigiandreamoretti.com`:
 - Linked in footer for transparency
 
 ### External Embeds
-- **YouTube (MEMoPAD video):** Uses privacy-enhanced mode (`youtube-nocookie.com`)
+- **YouTube videos:** Shown as self-hosted thumbnails; nothing is requested from YouTube until the visitor clicks play, then the video loads in privacy-enhanced mode (`youtube-nocookie.com`)
+- **Fonts:** Inter is self-hosted (no Google Fonts requests)
 - **Social links:** Direct links, no embedded widgets
 - **No email capture forms** - Contact via email link only
 
@@ -333,9 +341,9 @@ All should point to `https://luigiandreamoretti.com`:
 
 ### Version Control
 - **GitHub repository:** https://github.com/LuigiAM/luigiandreamoretti.com
-- **Branch strategy:** Single `master` branch (simple project)
+- **Branch strategy:** `main` is production; use a short-lived branch for larger changes to get a Cloudflare preview URL
 - **Commit convention:** Descriptive messages ("Update: Added Q4 2025 achievements")
-- **Deployment:** Automatic via Cloudflare Pages on push to master
+- **Deployment:** Automatic via Cloudflare Pages on push to `main`
 
 ### Backup Strategy
 - **Git history:** Full version control in GitHub
@@ -347,11 +355,11 @@ All should point to `https://luigiandreamoretti.com`:
 ## 10. Future Enhancements (Roadmap)
 
 ### Short-term (Next 3 months)
-- [ ] Fix mobile hamburger menu bug
+- [x] Fix mobile hamburger menu bug (Sep 2026 - verify on real devices)
 - [ ] Add blog section for research updates (optional)
 - [ ] Implement contact form with spam protection
 - [ ] Add testimonials section (from MEMoPAD participants, collaborators)
-- [ ] Create downloadable CV/resume PDF
+- [x] Create downloadable CV/resume PDF (Sep 2026)
 
 ### Medium-term (6 months)
 - [ ] Add case study pages for major projects (IntelliHearts, FabCraft)
@@ -390,9 +398,9 @@ All should point to `https://luigiandreamoretti.com`:
 **Prevention:** Test in Safari (strictest WebP support)
 
 ### Issue: Mobile menu not working
-**Cause:** JavaScript event listener timing or missing overlay element  
-**Solution:** (In progress) Verify DOM ready state, check z-index conflicts  
-**Workaround:** Desktop nav works, mobile users can scroll to sections
+**Cause:** `backdrop-filter` on `.navbar` created a containing block for the fixed `.nav-links` drawer, and the navbar was hidden (`top: -100px`) until 100px of scroll  
+**Solution:** Blur moved to `.navbar::before`; navbar always visible (Sep 2026)  
+**Status:** Fixed - confirm on real iOS Safari / Android Chrome
 
 ### Issue: Slow initial load time
 **Cause:** Large hero image, blocking JavaScript  
@@ -431,7 +439,7 @@ All should point to `https://luigiandreamoretti.com`:
 **Deployment:**
 - Always test locally first (Live Server extension in VS Code)
 - Commit with descriptive messages
-- Push to master triggers auto-deploy (wait 2 min)
+- Push to `main` triggers auto-deploy (wait 2 min); other branches deploy to a preview URL
 - Verify on preview URL before DNS propagation
 
 ### When User Asks for Website Changes
@@ -480,6 +488,7 @@ GitHub: https://github.com/LuigiAM
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | Oct 2025 | Initial creation after Cloudflare Pages migration |
+| 1.1 | Sep 2026 | Site audit fixes: SEO files at root, favicon/OG image, 404 page, self-hosted font, click-to-load video, image optimisation, `_headers`, AA contrast token, mobile nav fix, CV download |
 
 ---
 

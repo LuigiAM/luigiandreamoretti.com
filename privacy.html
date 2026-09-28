@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Luigi A. Moretti</title>
     <meta name="description" content="Privacy policy for luigiandreamoretti.com - How we handle your data and protect your privacy.">
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://luigiandreamoretti.com/privacy">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/style.css">
     <style>
         .privacy-page {
@@ -44,7 +48,7 @@
             margin-bottom: 1.5rem;
         }
         .privacy-page a {
-            color: var(--color-primary);
+            color: var(--color-primary-strong);
             text-decoration: underline;
         }
         .privacy-page .contact-box {
@@ -58,23 +62,29 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar" class="navbar visible">
+    <nav id="navbar" class="navbar scrolled">
         <div class="container">
-            <div class="nav-brand">
-                <a href="/" style="color: inherit; text-decoration: none;">Luigi A. Moretti</a>
-            </div>
-            <ul class="nav-links">
+            <a href="/" class="nav-brand">Luigi A. Moretti</a>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/#about">About</a></li>
                 <li><a href="/#current-focus">Research</a></li>
                 <li><a href="/#availability">Contact</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay"></div>
+
     <div class="privacy-page">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: October 13, 2025</p>
+        <p class="last-updated">Last updated: September 28, 2026</p>
 
         <p>
             This Privacy Policy explains how luigiandreamoretti.com ("the Website") collects, uses, and protects information about visitors. I am committed to protecting your privacy and being transparent about data practices.
@@ -108,7 +118,7 @@
         <p>No personally identifiable information is collected through Search Console. Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></p>
 
         <h3>2.2 YouTube Embedded Videos</h3>
-        <p>The Website embeds YouTube videos (MEMoPAD project demos). When you play a video, YouTube may collect:</p>
+        <p>The Website features YouTube videos (MEMoPAD project demos and presentations). Videos are shown as static preview images hosted on this Website, and <strong>no connection is made to YouTube until you click play</strong>. Videos then load in YouTube's privacy-enhanced mode (youtube-nocookie.com). When you play a video, YouTube may collect:</p>
         <ul>
             <li>Viewing statistics</li>
             <li>Device and browser information</li>
@@ -116,7 +126,10 @@
         </ul>
         <p>YouTube's data practices: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">YouTube Privacy Policy</a></p>
 
-        <h3>2.3 External Links</h3>
+        <h3>2.3 Fonts</h3>
+        <p>All fonts are self-hosted on this Website. No requests are made to Google Fonts or any other third-party font service.</p>
+
+        <h3>2.4 External Links</h3>
         <p>The Website contains links to external sites (LinkedIn, GitHub, ResearchGate, MEMoPAD project site). I am not responsible for the privacy practices of these external services.</p>
 
         <h2>3. Cookies</h2>
@@ -184,6 +197,21 @@
             <a href="mailto:hello@luigimoretti.com">Contact</a>
         </p>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luigi A. Moretti. All rights reserved.</p>
+                <p class="footer-meta">
+                    <a href="/">Home</a> •
+                    <a href="https://www.linkedin.com/in/luigiandreamoretti/" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
+                    <a href="https://orcid.org/0009-0002-6180-0565" target="_blank" rel="noopener noreferrer">ORCID</a> •
+                    <a href="/sitemap.xml">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="/js/main.js"></script>
 </body>

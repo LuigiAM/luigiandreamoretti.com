@@ -6,7 +6,7 @@ The site serves three audiences: recruiters and hiring managers in wearable heal
 
 ## Stack
 
-Vanilla HTML5, CSS3 (custom properties, no preprocessor), and vanilla JavaScript (no frameworks). Single-page layout with progressive enhancement. Hosted on Cloudflare Pages with automatic deployment from this repository's `master` branch.
+Vanilla HTML5, CSS3 (custom properties, no preprocessor), and vanilla JavaScript (no frameworks). Single-page layout with progressive enhancement. The Inter typeface is self-hosted under `fonts/` (SIL Open Font License, see `fonts/OFL.txt`). Hosted on Cloudflare Pages with automatic deployment from this repository's `main` branch; other branches get preview deployments.
 
 For full technical and content context, see [`CLAUDE.md`](./CLAUDE.md).
 

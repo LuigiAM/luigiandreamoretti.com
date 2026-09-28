@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luigi A. Moretti - Wearable Mental Health Technology Researcher & Product Manager</title>
-    <meta name="description" content="Luigi A. Moretti: PhD candidate building wearable emotion monitoring for anxiety disorders. MD, MSc Health Tech, graduating Fall 2026. Available for PM & research roles.">
-    <meta name="keywords" content="Luigi Moretti, wearable health, mental health technology, affective computing, product manager, PhD researcher, anxiety disorders, emotion monitoring, digital health">
-    
+    <title>Luigi Andrea Moretti | Wearable Mental Health Tech & Product</title>
+    <meta name="description" content="MD and PhD researcher building wearable emotion monitoring for anxiety disorders. Open to product management and research roles in digital health.">
+    <link rel="canonical" href="https://luigiandreamoretti.com/">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Luigi A. Moretti - Wearable Mental Health Technology">
-    <meta property="og:description" content="Building emotion monitoring technology for anxiety disorders. PhD candidate at UWE Bristol, graduating Fall 2026.">
+    <meta property="og:description" content="MD and PhD researcher at UWE Bristol building wearable emotion monitoring for anxiety disorders. Open to product and research roles.">
     <meta property="og:image" content="https://luigiandreamoretti.com/images/og-image.jpg">
-    <meta property="og:url" content="https://luigiandreamoretti.com">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Luigi A. Moretti - Building Wearable Mental Health Technology">
+    <meta property="og:url" content="https://luigiandreamoretti.com/">
     <meta property="og:type" content="website">
-    
+    <meta property="og:site_name" content="Luigi A. Moretti">
+    <meta property="og:locale" content="en_GB">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@LuigiAndreaM">
     <meta name="twitter:title" content="Luigi A. Moretti - Wearable Mental Health Technology">
-    <meta name="twitter:description" content="Building emotion monitoring technology for anxiety disorders. PhD candidate at UWE Bristol, graduating Fall 2026.">
+    <meta name="twitter:description" content="MD and PhD researcher at UWE Bristol building wearable emotion monitoring for anxiety disorders. Open to product and research roles.">
     <meta name="twitter:image" content="https://luigiandreamoretti.com/images/og-image.jpg">
     
-    <!-- Performance Optimization -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://www.youtube.com">
-    
     <!-- Preload critical assets -->
-    <link rel="preload" href="/css/style.css" as="style">
-    <link rel="preload" href="/js/main.js" as="script">
-    <link rel="preload" href="/images/hero-linkedin.webp" as="image">
+    <link rel="preload" href="/images/hero-linkedin.webp" as="image" imagesrcset="/images/hero-linkedin-400.webp 400w, /images/hero-linkedin.webp 800w" imagesizes="(max-width: 640px) 200px, (max-width: 968px) 300px, 400px" fetchpriority="high">
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     
-    <!-- Fonts - Self-hosted for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
+    <!-- Styles (Inter is self-hosted via @font-face in style.css) -->
     <link rel="stylesheet" href="/css/style.css">
     
 <!-- Enhanced Schema.org Structured Data -->
@@ -64,12 +62,26 @@
                 "https://github.com/LuigiAM",
                 "https://www.researchgate.net/profile/Luigi-Moretti-2",
                 "https://x.com/LuigiAndreaM",
-                "https://orcid.org/0009-0002-6180-0565",
-                "https://www.uwe.ac.uk/research/centres-and-groups/reach/members#section-5",
-                "https://sites.google.com/view/ai-cv-for-nds/home#h.63g48x9s290p",
-                "https://www.bristol.ac.uk/neuroscience/events/2024/phwe-23jul.html"
+                "https://orcid.org/0009-0002-6180-0565"
             ],
-            
+
+            "subjectOf": [
+                {
+                    "@type": "WebPage",
+                    "url": "https://www.uwe.ac.uk/research/centres-and-groups/reach/members#section-5"
+                },
+                {
+                    "@type": "WebPage",
+                    "url": "https://sites.google.com/view/ai-cv-for-nds/home#h.63g48x9s290p"
+                },
+                {
+                    "@type": "WebPage",
+                    "url": "https://www.bristol.ac.uk/neuroscience/events/2024/phwe-23jul.html"
+                }
+            ],
+
+            "knowsLanguage": ["en", "it"],
+
             "worksFor": {
                 "@id": "https://www.uwe.ac.uk/#organization"
             },
@@ -171,20 +183,10 @@
                 {
                     "@type": "EducationalOccupationalCredential",
                     "credentialCategory": "degree",
-                    "name": "PhD in Digital Health Technologies",
-                    "educationalLevel": "Doctoral",
-                    "recognizedBy": {
-                        "@id": "https://www.uwe.ac.uk/#organization"
-                    }
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "credentialCategory": "degree",
-                    "name": "MSc Health Technology",
+                    "name": "MSc Health Technologies (Distinction)",
                     "educationalLevel": "Master's",
                     "recognizedBy": {
-                        "@type": "Organization",
-                        "name": "University of Bari Aldo Moro"
+                        "@id": "https://www.uwe.ac.uk/#organization"
                     }
                 },
                 {
@@ -218,9 +220,16 @@
                 }
             ],
             
-            "award": "Best Student Poster Award (Multimodal AI Workshop 2024), Top 10 Finalist (ADB/Agorize COVID-19 Competition), Semi-finalist (Webit 2021)",
-            
-            "seeks": "Product Management or Research Scientist positions in wearable health technology, digital mental health, or affective computing (UK, EU, US) starting Fall 2026"
+            "award": [
+                "Winner, Milbotix SmartSocks Pioneers Competition (2026)",
+                "Best Student Poster Award, Multimodal AI Workshop (2024)",
+                "Top 10 Finalist, ADB/Agorize COVID-19 Vaccine Safety Monitoring Competition (2021)",
+                "Semi-finalist, Webit (2021)",
+                "Winner, StartCup Apulia (2019)",
+                "Winner, PREDICT & BaLab Medical Device Design Hackathon (2018)"
+            ],
+
+            "seeks": "Product Management or Research Scientist positions in wearable health technology, digital mental health, or affective computing (UK, EU, Switzerland, US)"
         },
         
         {
@@ -290,15 +299,15 @@
     <!-- Navigation (sticky, appears after scroll) -->
     <nav id="navbar" class="navbar">
         <div class="container">
-            <div class="nav-brand">Luigi A. Moretti</div>
-            <ul class="nav-links">
+            <a href="#hero" class="nav-brand">Luigi A. Moretti</a>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#current-focus">Current Focus</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#availability">Contact</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -318,24 +327,24 @@
                 <p class="hero-credentials">MD • MSc Health Tech • PhD Candidate</p>
                 
                 <div class="hero-cta">
-                    <a href="https://memopad.luigiandreamoretti.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <a href="/Luigi-Andrea-Moretti-CV.pdf" class="btn btn-primary" download>
+                        Download CV
+                    </a>
+                    <a href="#availability" class="btn btn-secondary">
+                        Get in Touch
+                    </a>
+                    <a href="https://memopad.luigiandreamoretti.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         MEMoPAD Project
                     </a>
-                    <a href="https://www.linkedin.com/in/luigiandreamoretti/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                        LinkedIn
-                    </a>
-                    <!--<a href="mailto:hello@luigimoretti.com" class="btn btn-secondary">
-                        Email me
-                    </a> -->
                 </div>
             </div>
-            
+
             <div class="hero-visual">
                 <div class="hero-image-wrapper">
-                    <img src="/images/hero-linkedin.webp" alt="Luigi A. Moretti - Wearable mental health technology researcher" class="hero-image" loading="eager">
+                    <img src="/images/hero-linkedin.webp" srcset="/images/hero-linkedin-400.webp 400w, /images/hero-linkedin.webp 800w" sizes="(max-width: 640px) 200px, (max-width: 968px) 300px, 400px" alt="Luigi A. Moretti - Wearable mental health technology researcher" class="hero-image" width="800" height="800" loading="eager" fetchpriority="high">
                     <div class="availability-badge">
                         <span class="pulse-dot"></span>
-                        <span class="badge-text"><a href="#availability">Available Fall 2026</a></span>
+                        <span class="badge-text"><a href="#availability">Open to new roles</a></span>
                     </div>
                 </div>
             </div>
@@ -358,16 +367,15 @@
                 
                 <div class="about-paragraphs">
                     <p>
-                        I've watched people I care about struggle with mental health challenges in a system that struggles in providing adequate care in mental health. We have sensors tracking physiological responses and user activities 24/7, but mental health care barely uses this data. That gap felt solvable, and deeply personal. So I pivoted from clinical medicine to building the technology that could bridge it.
+                        I've watched people I care about struggle with mental health challenges in a system that struggles to provide adequate mental health care. We have sensors tracking physiological responses and user activities 24/7, but mental health care barely uses this data. That gap felt solvable, and deeply personal. So I pivoted from clinical medicine to building the technology that could bridge it.
                     </p>
                     
                     <p>
-                        My path hasn't been linear: medical doctor → healthtech founder → PhD researcher. Each step taught me something the previous couldn't. Medicine showed me what patients actually need (not what technologists assume). Startups taught me how to build products people use (not just research prototypes). My PhD is letting me do both with rigor co-designing wearable emotion monitoring with patients, carers, and clinicians to ensure it's clinically valid and genuinely useful.
+                        My path hasn't been linear: medical doctor → healthtech founder → PhD researcher. Each step taught me something the previous couldn't. Medicine showed me what patients actually need (not what technologists assume). Startups taught me how to build products people use (not just research prototypes). My PhD is letting me do both, with rigour: co-designing wearable emotion monitoring with patients, carers, and clinicians to ensure it's clinically valid and genuinely useful.
                     </p>
                     
                     <p>
-                        
-I blend competencies too often kept separate: clinical insight, technical execution, and product thinking. I know why cEDA sensors matter for emotion detection. I know why patients need context, not just numbers. I know why clinicians won't adopt tools that add friction to their practice. And I know how to translate research into products that pragmatically solve real problems.
+                        I blend competencies too often kept separate: clinical insight, technical execution, and product thinking. I know why continuous skin-conductance (EDA) sensors matter for emotion detection. I know why patients need context, not just numbers. I know why clinicians won't adopt tools that add friction to their practice. And I know how to translate research into products that pragmatically solve real problems.
                     </p>
                 </div>
             </div>
@@ -377,31 +385,33 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     <div class="slideshow-track">
                         <div class="slideshow-slide active">
                             <img src="/images/conference-presentation.webp"
+                                 srcset="/images/conference-presentation-600.webp 600w, /images/conference-presentation.webp 1200w"
+                                 sizes="(max-width: 968px) 100vw, 550px"
                                  alt="Luigi A. Moretti presenting MEMoPAD research on affective computing for anxiety disorders at Digital Mental Health Conference, Ulster University"
                                  class="conference-image"
                                  loading="lazy">
                             <div class="image-caption">
-                                <span class="caption-icon">🎤</span>
+                                <span class="caption-icon" aria-hidden="true">🎤</span>
                                 <span class="caption-text">Presenting MEMoPAD research at Digital Mental Health Conference, Ulster University - 2024</span>
                             </div>
                         </div>
                         <div class="slideshow-slide">
-                            <img src="/images/gallery/poster-award.jpg"
+                            <img src="/images/gallery/poster-award.webp"
                                  alt="Luigi A. Moretti receiving Best Student Poster Award at Multimodal AI Workshop"
                                  class="conference-image"
                                  loading="lazy">
                             <div class="image-caption">
-                                <span class="caption-icon">🏆</span>
+                                <span class="caption-icon" aria-hidden="true">🏆</span>
                                 <span class="caption-text">Best Student Poster Award, Multimodal AI Workshop - June 2024</span>
                             </div>
                         </div>
                         <div class="slideshow-slide">
-                            <img src="/images/gallery/conference-presentation.jpeg"
+                            <img src="/images/gallery/conference-presentation.webp"
                                  alt="Luigi A. Moretti presenting AI in Precision Psychiatry at Elizabeth Blackwell Institute, University of Bristol"
                                  class="conference-image"
                                  loading="lazy">
                             <div class="image-caption">
-                                <span class="caption-icon">🎤</span>
+                                <span class="caption-icon" aria-hidden="true">🎤</span>
                                 <span class="caption-text">AI in Precision Psychiatry, Elizabeth Blackwell Institute, University of Bristol - October 2024</span>
                             </div>
                         </div>
@@ -411,7 +421,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
                                  class="conference-image"
                                  loading="lazy">
                             <div class="image-caption">
-                                <span class="caption-icon">🎓</span>
+                                <span class="caption-icon" aria-hidden="true">🎓</span>
                                 <span class="caption-text">MSc Graduation in Health Technologies, UWE Bristol - 2022</span>
                             </div>
                         </div>
@@ -421,22 +431,26 @@ I blend competencies too often kept separate: clinical insight, technical execut
                         <button class="slideshow-dot" data-slide="1" aria-label="Slide 2"></button>
                         <button class="slideshow-dot" data-slide="2" aria-label="Slide 3"></button>
                         <button class="slideshow-dot" data-slide="3" aria-label="Slide 4"></button>
+                        <button class="slideshow-pause" type="button" aria-label="Pause slideshow" aria-pressed="false">
+                            <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                            <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+                        </button>
                     </div>
                 </div>
                 
                 <div class="about-highlights">
                     <div class="highlight-item">
-                        <span class="highlight-icon">🧬</span>
+                        <span class="highlight-icon" aria-hidden="true">🧬</span>
                         <span class="highlight-label">Multidisciplinary</span>
                         <span class="highlight-detail">Medicine × Tech × Product</span>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">🎓</span>
+                        <span class="highlight-icon" aria-hidden="true">🎓</span>
                         <span class="highlight-label">Evidence-Based Innovation</span>
                         <span class="highlight-detail">Research-based products</span>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">💡</span>
+                        <span class="highlight-icon" aria-hidden="true">💡</span>
                         <span class="highlight-label">0→1 Builder</span>
                         <span class="highlight-detail">Concept to deployed prototype</span>
                     </div>
@@ -462,40 +476,40 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     I'm developing a wearable emotion monitoring system using Google Pixel Watch 2 sensors (continuous electrodermal activity, heart rate, skin temperature) to help people with anxiety disorders understand their emotional patterns. The system captures real-world data and contextualizes it through mobile app interactions, providing insights for both patients and clinicians.
                 </p>
                 <p>
-                    Co-designed with patients, carers, and NHS clinicians across 6+1 phases (5 completed), MEMoPAD ensures the technology is clinically valid, genuinely useful, and integrable into clinical pathways. This isn't just research, it's a functional prototype designed for real-world deployment.
+                    Co-designed with patients, carers, and NHS clinicians across 7 phases (6 completed), MEMoPAD ensures the technology is clinically valid, genuinely useful, and integrable into clinical pathways. This isn't just research, it's a functional prototype designed for real-world deployment.
                 </p>
                 <p>
-                    The project bridges academic rigor with product thinking: published research validates the approach, while iterative co-design ensures people will actually use it. Currently recruiting for Phase V (implementation testing) and preparing thesis defense for Fall 2026.
+                    The project bridges academic rigor with product thinking: published research validates the approach, while iterative co-design ensures people will actually use it. Six of seven co-design phases are complete, and I'm now writing up my PhD thesis.
                 </p>
                 <p class="description-cta-text">
-                    Graduating Fall 2026. Exploring how to bring this technology to millions of users - whether through continued research, industry partnerships, or building a company.
+                    Exploring how to bring this technology to millions of users - whether through continued research, industry partnerships, or building a company.
                 </p>
             </div>
             
             <div class="spotlight-metrics">
                 <div class="metric-card metric-funding">
-                    <div class="metric-icon">💰</div>
+                    <div class="metric-icon" aria-hidden="true">💰</div>
                     <div class="metric-value">£10.5K</div>
                     <div class="metric-label">Funding Secured</div>
                     <div class="metric-detail">NHS + University Grants</div>
                 </div>
                 
                 <div class="metric-card metric-participants">
-                    <div class="metric-icon">👥</div>
+                    <div class="metric-icon" aria-hidden="true">👥</div>
                     <div class="metric-value">19-25</div>
                     <div class="metric-label">Participants per Phase</div>
                     <div class="metric-detail">Patients, Carers, Clinicians</div>
                 </div>
                 
                 <div class="metric-card metric-phases">
-                    <div class="metric-icon">🔄</div>
+                    <div class="metric-icon" aria-hidden="true">🔄</div>
                     <div class="metric-value">6/7</div>
                     <div class="metric-label">Co-Design Phases</div>
-                    <div class="metric-detail">Completed (Phase V recruiting)</div>
+                    <div class="metric-detail">Completed (final phase next)</div>
                 </div>
                 
                 <div class="metric-card metric-community">
-                    <div class="metric-icon">📬</div>
+                    <div class="metric-icon" aria-hidden="true">📬</div>
                     <div class="metric-value">600+</div>
                     <div class="metric-label">Newsletter Subscribers</div>
                     <div class="metric-detail">Monthly project updates</div>
@@ -505,14 +519,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
         
         <div class="spotlight-demo">
             <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/9uJHqtzO6cw"
-                    title="MEMoPAD Project Overview"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
+                <button class="video-thumb" type="button" data-video-id="9uJHqtzO6cw" data-video-title="MEMoPAD Project Overview" aria-label="Play video: MEMoPAD Project Overview">
+                    <img src="/images/video-thumbs/9uJHqtzO6cw.webp" alt="" width="960" height="540" loading="lazy">
+                    <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                </button>
             </div>
             <p class="video-caption">
                 <strong>MEMoPAD Prototype:</strong> Patient interface showing sensor data visualization, emotion tracking, and contextual note-taking. Built through iterative co-design with real users.
@@ -548,15 +558,15 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/uwe.png" alt="UWE Bristol" loading="lazy">
+                            <img src="/images/logos/uwe.webp" alt="UWE Bristol" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
                             <h3 class="timeline-title">Associate Researcher</h3>
                             <p class="timeline-organization">University of the West of England</p>
                             <p class="timeline-project">HUG x Milbotix Sensory-Wearable Integration Study</p>
-                            <p class="timeline-date">October 2024 - February 2026 <span class="timeline-badge">Current</span></p>
+                            <p class="timeline-date">October 2024 - February 2026</p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -599,7 +609,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/bristol.png" alt="University of Bristol" loading="lazy">
+                            <img src="/images/logos/bristol.webp" alt="University of Bristol" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
                             <h3 class="timeline-title">Visiting Researcher</h3>
@@ -607,7 +617,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
                             <p class="timeline-project">MaVi Sponsored Research Visit</p>
                             <p class="timeline-date">May 2024 - October 2024</p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -649,15 +659,15 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/uwe.png" alt="UWE Bristol" loading="lazy">
+                            <img src="/images/logos/uwe.webp" alt="UWE Bristol" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
                             <h3 class="timeline-title">PhD Researcher & Product Lead</h3>
                             <p class="timeline-organization">University of the West of England</p>
                             <p class="timeline-project">MEMoPAD Project</p>
-                            <p class="timeline-date">April 2023 - Present <span class="timeline-badge">Graduating Fall 2026</span></p>
+                            <p class="timeline-date">April 2023 - Present <span class="timeline-badge">Thesis write-up</span></p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -675,14 +685,14 @@ I blend competencies too often kept separate: clinical insight, technical execut
                                 <li>Defined clinical problem: 1 in 10 UK adults have anxiety disorders, yet remain under-diagnosed due to reliance on self-report questionnaires and clinic snapshots</li>
                                 <li>Technical implementation: Multimodal sensor fusion (continuous electrodermal activity, heart rate, skin temperature) with contextual data capture via mobile app</li>
                                 <li>User research: Led 7-phase co-design process with 19-25 participants each (patients, unpaid carers, clinicians) to validate features and ensure interpretability</li>
-                                <li>Prototyping: Building functional Android app, Wear OS Face, and clinician dashboard, iterating based on user feedback across 5 completed phases</li>
+                                <li>Prototyping: Building functional Android app, Wear OS Face, and clinician dashboard, iterating based on user feedback across 6 completed phases</li>
                             </ul>
                             
                             <h4>Impact & Validation:</h4>
                             <ul>
                                 <li>Published "Affective Computing in Anxiety Disorders: Rapid Literature Review" at HEALTHINF 2025</li>
                                 <li>Won Best Student Poster Award at Multimodal AI Workshop (University of Sheffield / Alan Turing Institute)</li>
-                                <li>Secured £10,500+ in competitive funding (NHS BNSSG ICB, UWE Bristol CATE grants)</li>
+                                <li>Secured £10,500+ in competitive funding (NHS Bristol, North Somerset &amp; South Gloucestershire ICB; UWE Bristol CATE grants)</li>
                                 <li>Designed for clinical pathway integration with ethical approvals</li>
                                 <li>Featured member: Experimental Psychology Society (EPS), Innovate Healthier Together Fellowship (NHS BNSSG)</li>
                             </ul>
@@ -701,20 +711,21 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 </div>
             </div>
             
-            <!-- Experience Entry 4: La Sapienza -->
+            <!-- Experience Entry 4: ASL Bari -->
             <div class="timeline-item" data-expanded="false" data-initial-visible="false">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/sapienza.png" alt="La Sapienza University" loading="lazy">
+                            <img src="/images/logos/asl-puglia.webp" alt="ASL Puglia" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
-                            <h3 class="timeline-title">Digital Health Research Consultant</h3>
-                            <p class="timeline-organization">La Sapienza University (Rome)</p>
-                            <p class="timeline-date">September 2020 - December 2020</p>
+                            <h3 class="timeline-title">Medical Doctor</h3>
+                            <p class="timeline-organization">ASL Puglia - Regional Health Authority</p>
+                            <p class="timeline-project">COVID-19 Vaccination Hub</p>
+                            <p class="timeline-date">May 2021 - October 2021</p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -723,24 +734,26 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     
                     <div class="timeline-details">
                         <p class="timeline-description">
-                            Hired as digital health expert for gastroenterology research project developing 3D imaging solutions.
+                            Front-line clinical practice during pandemic peak. Managed up to 80 patient consultations daily in 12-hour shifts at region's largest vaccination center.
                         </p>
                         
                         <div class="timeline-highlights">
-                            <h4>Contributions:</h4>
+                            <h4>Clinical Insights for Digital Health Product Development:</h4>
                             <ul>
-                                <li>Translated clinical requirements into technical specifications</li>
-                                <li>Realised 3D medical models and segmentations with novel techniques</li>
-                                <li>Validated feasibility of proposed 3D segmentation approaches for surgical planning</li>
-                                <li>Coordinated the work with a startup in charge of 3D printing the models</li>
+                                <li>Patient communication under uncertainty: Learned that addressing vaccine hesitancy requires empathetic scientific communication, not authoritative directives. Same principle applies to explaining wearable health data to anxious patients</li>
+                                <li>High-throughput care challenges: Experienced why digital tools fail when they add friction; every extra tap or screen matters when serving 80+ people daily</li>
+                                <li>Trust > Features: Technology adoption in healthcare depends on human connection and sense of trust first, technical capabilities second</li>
                             </ul>
                         </div>
                         
+                        <div class="timeline-impact">
+                            This shaped MEMoPAD's design philosophy: Build tools that enhance (not replace) clinician-patient relationships, and never assume users will tolerate complexity just because it's "technically better."
+                        </div>
+                        
                         <div class="timeline-skills">
-                            <span class="skill-tag">Digital Health</span>
-                            <span class="skill-tag">3D medical applications</span>
-                            <span class="skill-tag">Medical Imaging</span>
-                            <span class="skill-tag">Technical Consulting</span>
+                            <span class="skill-tag">Clinical Medicine</span>
+                            <span class="skill-tag">Patient Communication</span>
+                            <span class="skill-tag">Healthcare Operations</span>
                         </div>
                     </div>
                 </div>
@@ -752,14 +765,14 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/intellihearts.webp" alt="IntelliHearts" loading="lazy">
+                            <img src="/images/logos/intellihearts.webp" alt="IntelliHearts" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
                             <h3 class="timeline-title">Co-Founder & Product Lead</h3>
                             <p class="timeline-organization">IntelliHearts - Healthcare Wearables Startup</p>
                             <p class="timeline-date">November 2020 - September 2022</p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -805,21 +818,20 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 </div>
             </div>
             
-            <!-- Experience Entry 6: ASL Bari -->
+            <!-- Experience Entry 6: La Sapienza -->
             <div class="timeline-item" data-expanded="false" data-initial-visible="false">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/asl-puglia.png" alt="ASL Puglia" loading="lazy">
+                            <img src="/images/logos/sapienza.webp" alt="La Sapienza University" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
-                            <h3 class="timeline-title">Medical Doctor</h3>
-                            <p class="timeline-organization">ASL Puglia - Regional Health Authority</p>
-                            <p class="timeline-project">COVID-19 Vaccination Hub</p>
-                            <p class="timeline-date">May 2021 - October 2021</p>
+                            <h3 class="timeline-title">Digital Health Research Consultant</h3>
+                            <p class="timeline-organization">La Sapienza University (Rome)</p>
+                            <p class="timeline-date">September 2020 - December 2020</p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -828,26 +840,24 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     
                     <div class="timeline-details">
                         <p class="timeline-description">
-                            Front-line clinical practice during pandemic peak. Managed up to 80 patient consultations daily in 12-hour shifts at region's largest vaccination center.
+                            Hired as digital health expert for gastroenterology research project developing 3D imaging solutions.
                         </p>
                         
                         <div class="timeline-highlights">
-                            <h4>Clinical Insights for Digital Health Product Development:</h4>
+                            <h4>Contributions:</h4>
                             <ul>
-                                <li>Patient communication under uncertainty: Learned that addressing vaccine hesitancy requires empathetic scientific communication, not authoritative directives. Same principle applies to explaining wearable health data to anxious patients</li>
-                                <li>High-throughput care challenges: Experienced why digital tools fail when they add friction; every extra tap or screen matters when serving 80+ people daily</li>
-                                <li>Trust > Features: Technology adoption in healthcare depends on human connection and sense of trust first, technical capabilities second</li>
+                                <li>Translated clinical requirements into technical specifications</li>
+                                <li>Realised 3D medical models and segmentations with novel techniques</li>
+                                <li>Validated feasibility of proposed 3D segmentation approaches for surgical planning</li>
+                                <li>Coordinated the work with a startup in charge of 3D printing the models</li>
                             </ul>
                         </div>
                         
-                        <div class="timeline-impact">
-                            This shaped MEMoPAD's design philosophy: Build tools that enhance (not replace) clinician-patient relationships, and never assume users will tolerate complexity just because it's "technically better."
-                        </div>
-                        
                         <div class="timeline-skills">
-                            <span class="skill-tag">Clinical Medicine</span>
-                            <span class="skill-tag">Patient Communication</span>
-                            <span class="skill-tag">Healthcare Operations</span>
+                            <span class="skill-tag">Digital Health</span>
+                            <span class="skill-tag">3D medical applications</span>
+                            <span class="skill-tag">Medical Imaging</span>
+                            <span class="skill-tag">Technical Consulting</span>
                         </div>
                     </div>
                 </div>
@@ -859,14 +869,14 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="/images/logos/fabcraft.webp" alt="FabCraft" loading="lazy">
+                            <img src="/images/logos/fabcraft.webp" alt="FabCraft" width="80" height="80" loading="lazy">
                         </div>
                         <div class="timeline-info">
                             <h3 class="timeline-title">Co-Founder & Administrator</h3>
                             <p class="timeline-organization">FabCraft / Climb3D - Digital Manufacturing Startup</p>
                             <p class="timeline-date">January 2018 - December 2019</p>
                         </div>
-                        <button class="timeline-toggle" aria-label="Toggle details">
+                        <button class="timeline-toggle" aria-label="Toggle details" aria-expanded="false">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
@@ -931,9 +941,9 @@ I blend competencies too often kept separate: clinical insight, technical execut
             <h3 class="gallery-category-title">Products & Prototypes</h3>
 
             <div class="video-gallery-grid">
-                <div class="video-gallery-item product-card" data-video-id="_ZfFJO2GutQ">
+                <div class="video-gallery-item product-card" data-video-id="_ZfFJO2GutQ" data-video-title="MEMoPAD Ecosystem">
                     <div class="product-image-wrapper">
-                        <img src="images/gallery/memopad-ecosystem.webp" alt="MEMoPAD Ecosystem - smartphone, wearable, and web application" loading="lazy">
+                        <img src="images/gallery/memopad-ecosystem.webp" alt="MEMoPAD Ecosystem - smartphone, wearable, and web application" width="800" height="754" loading="lazy">
                         <button class="watch-video-btn" aria-label="Watch MEMoPAD in action">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                             Watch in Action
@@ -946,9 +956,9 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     </div>
                 </div>
 
-                <div class="video-gallery-item product-card" data-video-id="zCHwg8tJSfg">
+                <div class="video-gallery-item product-card" data-video-id="zCHwg8tJSfg" data-video-title="IntelliHearts Wearable">
                     <div class="product-image-wrapper">
-                        <img src="images/gallery/intellihearts.webp" alt="IntelliHearts wearable ECG cardiac monitoring device" loading="lazy">
+                        <img src="images/gallery/intellihearts.webp" alt="IntelliHearts wearable ECG cardiac monitoring device" width="800" height="755" loading="lazy">
                         <button class="watch-video-btn" aria-label="Watch IntelliHearts in action">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                             Watch in Action
@@ -956,14 +966,14 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">IntelliHearts Wearable</h4>
-                        <p class="video-gallery-period">2020 - 2021</p>
+                        <p class="video-gallery-period">2020 - 2022</p>
                         <p class="video-gallery-detail">1-lead ECG cardiac monitoring with emotion detection feature</p>
                     </div>
                 </div>
 
-                <div class="video-gallery-item product-card" data-video-id="7WuJ8nFq-IE">
+                <div class="video-gallery-item product-card" data-video-id="7WuJ8nFq-IE" data-video-title="My Health Data (MyHD)">
                     <div class="product-image-wrapper">
-                        <img src="images/gallery/myhealthdata.webp" alt="My Health Data (MyHD) personal health records application" loading="lazy">
+                        <img src="images/gallery/myhealthdata.webp" alt="My Health Data (MyHD) personal health records application" width="800" height="736" loading="lazy">
                         <button class="watch-video-btn" aria-label="Watch MyHD in action">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                             Watch in Action
@@ -986,14 +996,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
                 <div class="video-gallery-item" data-initial-visible="true">
                     <div class="video-gallery-wrapper">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/_PDEcOkDbsQ"
-                            title="MEMoPAD Elizabeth Blackwell Institute Pitch 2024"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                        <button class="video-thumb" type="button" data-video-id="_PDEcOkDbsQ" data-video-title="MEMoPAD Elizabeth Blackwell Institute Pitch 2024" aria-label="Play video: MEMoPAD Elizabeth Blackwell Institute Pitch 2024">
+                            <img src="/images/video-thumbs/_PDEcOkDbsQ.webp" alt="" width="640" height="360" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                        </button>
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">MEMoPAD @ Uni. of Bristol</h4>
@@ -1004,14 +1010,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
                 <div class="video-gallery-item" data-initial-visible="true">
                     <div class="video-gallery-wrapper">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/o7TnkdVPpYU"
-                            title="IntelliHearts Pitch at SMART Hackathon 2021"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                        <button class="video-thumb" type="button" data-video-id="o7TnkdVPpYU" data-video-title="IntelliHearts Pitch at SMART Hackathon 2021" aria-label="Play video: IntelliHearts Pitch at SMART Hackathon 2021">
+                            <img src="/images/video-thumbs/o7TnkdVPpYU.webp" alt="" width="640" height="360" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                        </button>
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">IntelliHearts @ SMART Hack</h4>
@@ -1022,14 +1024,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
                 <div class="video-gallery-item" data-initial-visible="true">
                     <div class="video-gallery-wrapper">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/IbaSnb76B48"
-                            title="Ortopedia3D Pitch at PNI 2020"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                        <button class="video-thumb" type="button" data-video-id="IbaSnb76B48" data-video-title="Ortopedia3D Pitch at PNI 2020" aria-label="Play video: Ortopedia3D Pitch at PNI 2020">
+                            <img src="/images/video-thumbs/IbaSnb76B48.webp" alt="" width="640" height="360" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                        </button>
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">Ortopedia3D @ PNI</h4>
@@ -1040,14 +1038,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
                 <div class="video-gallery-item" data-initial-visible="false">
                     <div class="video-gallery-wrapper">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/ROP7yEk3eX4"
-                            title="MD Thesis Defense"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                        <button class="video-thumb" type="button" data-video-id="ROP7yEk3eX4" data-video-title="MD Thesis Defense" aria-label="Play video: MD Thesis Defense">
+                            <img src="/images/video-thumbs/ROP7yEk3eX4.webp" alt="" width="640" height="360" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                        </button>
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">MD Thesis Defense</h4>
@@ -1077,14 +1071,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
                 <div class="video-gallery-item" data-initial-visible="false">
                     <div class="video-gallery-wrapper">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/by6M7d4co3M"
-                            title="MyHD Pitch at PNI 2019"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                        <button class="video-thumb" type="button" data-video-id="by6M7d4co3M" data-video-title="MyHD Pitch at PNI 2019" aria-label="Play video: MyHD Pitch at PNI 2019">
+                            <img src="/images/video-thumbs/by6M7d4co3M.webp" alt="" width="640" height="360" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                        </button>
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">MyHD @ PNI</h4>
@@ -1095,14 +1085,10 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
                 <div class="video-gallery-item" data-initial-visible="false">
                     <div class="video-gallery-wrapper">
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/qgrQpoOfOmw"
-                            title="Climb3D Promotional Video"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                        <button class="video-thumb" type="button" data-video-id="qgrQpoOfOmw" data-video-title="Climb3D Promotional Video" aria-label="Play video: Climb3D Promotional Video">
+                            <img src="/images/video-thumbs/qgrQpoOfOmw.webp" alt="" width="640" height="360" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+                        </button>
                     </div>
                     <div class="video-gallery-info">
                         <h4 class="video-gallery-title">Climb3D</h4>
@@ -1128,29 +1114,15 @@ I blend competencies too often kept separate: clinical insight, technical execut
     </div>
 </section>
 
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox">
-    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <img class="lightbox-image" id="lightbox-img" src="" alt="">
-    <div class="lightbox-info">
-        <p class="lightbox-caption" id="lightbox-caption"></p>
-        <p class="lightbox-detail" id="lightbox-detail"></p>
+<!-- Video Modal (click-to-load YouTube) -->
+<dialog class="video-modal" id="video-modal" aria-label="Video player">
+    <button class="video-modal-close" type="button" aria-label="Close video">&times;</button>
+    <div class="video-modal-wrapper">
+        <iframe id="video-modal-iframe" title="Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </div>
-    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
-    <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
-</div>
-
-<!-- Video Modal (Products & Prototypes) -->
-<div class="video-modal" id="video-modal">
-    <button class="video-modal-close" aria-label="Close video">&times;</button>
-    <div class="video-modal-content">
-        <div class="video-modal-wrapper">
-            <iframe id="video-modal-iframe" src="" title="Product video" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
+</dialog>
 
 <!-- Achievements Gallery Section -->
 <section id="achievements" class="achievements section">
@@ -1162,28 +1134,28 @@ I blend competencies too often kept separate: clinical insight, technical execut
         
         <!-- Filter Tabs -->
         <div class="achievements-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="funding">Funding</button>
-            <button class="filter-btn" data-filter="awards">Awards</button>
-            <button class="filter-btn" data-filter="publications">Publications</button>
-            <button class="filter-btn" data-filter="memberships">Memberships</button>
-            <button class="filter-btn" data-filter="speaking">Speaking</button>
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="funding" aria-pressed="false">Funding</button>
+            <button class="filter-btn" data-filter="awards" aria-pressed="false">Awards</button>
+            <button class="filter-btn" data-filter="publications" aria-pressed="false">Publications</button>
+            <button class="filter-btn" data-filter="memberships" aria-pressed="false">Memberships</button>
+            <button class="filter-btn" data-filter="speaking" aria-pressed="false">Speaking</button>
         </div>
         
         <!-- Achievements Grid -->
         <div class="achievements-grid">
             <!-- Funding Achievements -->
             <div class="achievement-card" data-category="funding" data-date="2025-08">
-                <div class="achievement-icon">💰</div>
+                <div class="achievement-icon" aria-hidden="true">💰</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">NHS BNSSG ICB Grant</h3>
-                    <p class="achievement-detail">£1,500 for PPIE activities</p>
+                    <p class="achievement-detail">£1,500 for patient and public involvement (PPIE) activities</p>
                     <p class="achievement-date">August 2025</p>
                 </div>
             </div>
             
             <div class="achievement-card" data-category="funding" data-date="2025-06">
-                <div class="achievement-icon">💰</div>
+                <div class="achievement-icon" aria-hidden="true">💰</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">CATE Student Internship</h3>
                     <p class="achievement-detail">Grant for Louis Robinson, recruited during a presentation, to support prototype development</p>
@@ -1192,7 +1164,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="funding" data-date="2024-12">
-                <div class="achievement-icon">💰</div>
+                <div class="achievement-icon" aria-hidden="true">💰</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">CATE Public Engagement Fund</h3>
                     <p class="achievement-detail">£3,000 from UWE Bristol</p>
@@ -1201,7 +1173,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="funding" data-date="2023-04">
-                <div class="achievement-icon">💰</div>
+                <div class="achievement-icon" aria-hidden="true">💰</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">PhD Scholarship</h3>
                     <p class="achievement-detail">3.5-year funding + £3,000 project expenses</p>
@@ -1210,7 +1182,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="funding" data-date="2018-01">
-                <div class="achievement-icon">💰</div>
+                <div class="achievement-icon" aria-hidden="true">💰</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">PIN EU Grant</h3>
                     <p class="achievement-detail">€30,000 for FabCraft startup</p>
@@ -1219,7 +1191,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="funding" data-date="2021-07">
-                <div class="achievement-icon">💰</div>
+                <div class="achievement-icon" aria-hidden="true">💰</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">PassLaureati</h3>
                     <p class="achievement-detail">Studentship for MSc fees + salary</p>
@@ -1228,17 +1200,8 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <!-- Awards -->
-            <div class="achievement-card" data-category="awards" data-date="2026-07">
-                <div class="achievement-icon">🏆</div>
-                <div class="achievement-content">
-                    <h3 class="achievement-title">MHP Associate Member</h3>
-                    <p class="achievement-detail">Researcher aligns with Mental Health Platform aims and values.</p>
-                    <p class="achievement-date">July 2026</p>
-                </div>
-            </div>
-
             <div class="achievement-card" data-category="awards" data-date="2026-01">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Won Milbotix's SmartSocks Pioneers Competition</h3>
                     <p class="achievement-detail">Secured a smartsocks kit worth £1,000 to explore its potential in mental health</p>
@@ -1247,7 +1210,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="awards" data-date="2024-06">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Best Student Poster Award</h3>
                     <p class="achievement-detail">Multimodal AI Workshop (Sheffield / Alan Turing Institute)</p>
@@ -1256,7 +1219,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="awards" data-date="2024-05">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Research visit sponsorship</h3>
                     <p class="achievement-detail">University of Bristol</p>
@@ -1265,7 +1228,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="awards" data-date="2021-08">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Top 10 ADB/Agorize Competition</h3>
                     <p class="achievement-detail">COVID-19 Vaccine Safety Monitoring</p>
@@ -1274,7 +1237,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="awards" data-date="2021-11">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Webit 2021 Semi-finalist</h3>
                     <p class="achievement-detail">IntelliHearts startup pitch</p>
@@ -1283,7 +1246,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="awards" data-date="2019-10">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">StartCup Apulia 2019 winner</h3>
                     <p class="achievement-detail">MyHealthData (MyHD) startup pitch</p>
@@ -1292,7 +1255,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="awards" data-date="2018-09">
-                <div class="achievement-icon">🏆</div>
+                <div class="achievement-icon" aria-hidden="true">🏆</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Winner Hackathon Medical Device Design</h3>
                     <p class="achievement-detail">PREDICT & BaLab: Mistral</p>
@@ -1302,25 +1265,25 @@ I blend competencies too often kept separate: clinical insight, technical execut
 
             <!-- Publications -->
             <div class="achievement-card" data-category="publications" data-date="2026-07">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
-                    <h3 class="achievement-title">MEMOPAD: Multimodal Emotion Monitoring in Clinical Pathways for Anxiety Disorders</h3>
-                    <p class="achievement-detail">Paper and prototype demo at the Interactive Health Conference 2026</p>
+                    <h3 class="achievement-title">Interactive Health Conference 2026</h3>
+                    <p class="achievement-detail">MEMoPAD: Multimodal Emotion Monitoring in Clinical Pathways for Anxiety Disorders - paper and interactive prototype demo</p>
                     <p class="achievement-date">July 2026</p>
                 </div>
             </div>
 
-            <div class="achievement-card" data-category="publications" data-date="2025-10">
-                <div class="achievement-icon">📄</div>
+            <div class="achievement-card" data-category="publications" data-date="2026-06">
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
-                    <h3 class="achievement-title">Behavioral Biometrics and Artificial Intelligence for Neurodegenerative Diseases AssessmentPublisher: Elsevier</h3>
-                    <p class="achievement-detail">Identifying emotion patterns in speech for Alzheimer’s disease assessment: A novel perspective</p>
+                    <h3 class="achievement-title">Elsevier Book Chapter</h3>
+                    <p class="achievement-detail">Identifying emotion patterns in speech for Alzheimer’s disease assessment: A novel perspective - in <em>Behavioral Biometrics and Artificial Intelligence for Neurodegenerative Diseases Assessment</em></p>
                     <p class="achievement-date">June 2026</p>
                 </div>
             </div>
 
             <div class="achievement-card" data-category="publications" data-date="2025-10">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Nature Machine Intelligence Community Paper</h3>
                     <p class="achievement-detail">Towards deployment-centric multimodal AI beyond vision and language</p>
@@ -1329,7 +1292,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="publications" data-date="2025-11">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">BCS HCI 2025 Position Paper</h3>
                     <p class="achievement-detail">Co-Designing Human-Centered AI Technologies Workshop</p>
@@ -1338,7 +1301,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="publications" data-date="2022-07">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Pattern Recognition</h3>
                     <p class="achievement-detail">AUCO ResNet: an end-to-end network for Covid-19 pre-screening from cough and breath</p>
@@ -1346,7 +1309,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 </div>
             </div>
             <div class="achievement-card" data-category="publications" data-date="2023-06">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">DSTNDS</h3>
                     <p class="achievement-detail">An Approach using transformer architecture for emotion recognition through Electrocardiogram Signal (s)</p>
@@ -1354,16 +1317,16 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 </div>
             </div>
             <div class="achievement-card" data-category="publications" data-date="2023-06">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
-                    <h3 class="achievement-title">CEUR WORKSHOP</h3>
+                    <h3 class="achievement-title">CEUR Workshop Proceedings</h3>
                     <p class="achievement-detail">A benchmarking study of deep learning techniques applied for breath analysis</p>
                     <p class="achievement-date">June 2023</p>
                 </div>
             </div>
             
             <div class="achievement-card" data-category="publications" data-date="2025-09">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">BMJ Digital Health & AI</h3>
                     <p class="achievement-detail">Clinical AI Scribes in primary care: accuracy, error severity and implications for clinical practice</p>
@@ -1372,7 +1335,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="publications" data-date="2025-02">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">HEALTHINF 2025 Publication</h3>
                     <p class="achievement-detail">Affective Computing in Anxiety Disorders: Rapid Literature Review</p>
@@ -1381,7 +1344,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="publications" data-date="2024-06">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">DMHW 2024 Conference</h3>
                     <p class="achievement-detail">2 abstracts published at Digital Mental Health Conference</p>
@@ -1390,7 +1353,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="publications" data-date="2026-04">
-                <div class="achievement-icon">📄</div>
+                <div class="achievement-icon" aria-hidden="true">📄</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">CHI 2026 Workshop</h3>
                     <p class="achievement-detail">Short paper in Engagement in Digital Health Interventions</p>
@@ -1398,19 +1361,18 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 </div>
             </div>
 
-            <div class="achievement-card" data-category="publications" data-date="2026-07">
-                <div class="achievement-icon">📄</div>
+            <!-- Memberships -->
+            <div class="achievement-card" data-category="memberships" data-date="2026-07">
+                <div class="achievement-icon" aria-hidden="true">🎓</div>
                 <div class="achievement-content">
-                    <h3 class="achievement-title">Interactive Health Conference 2026</h3>
-                    <p class="achievement-detail">Published a paper and presenting an interactive demo of MEMoPAD</p>
+                    <h3 class="achievement-title">MHP Associate Member</h3>
+                    <p class="achievement-detail">Mental Health Platform - research aligned with its aims and values</p>
                     <p class="achievement-date">July 2026</p>
                 </div>
             </div>
 
-            
-            <!-- Memberships -->
             <div class="achievement-card" data-category="memberships" data-date="2025-01">
-                <div class="achievement-icon">🎓</div>
+                <div class="achievement-icon" aria-hidden="true">🎓</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">EPS Postgraduate Member</h3>
                     <p class="achievement-detail">Experimental Psychology Society</p>
@@ -1419,7 +1381,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="memberships" data-date="2024-12">
-                <div class="achievement-icon">🎓</div>
+                <div class="achievement-icon" aria-hidden="true">🎓</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">IHT Fellowship</h3>
                     <p class="achievement-detail">Innovate Healthier Together (NHS BNSSG)</p>
@@ -1428,7 +1390,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="memberships" data-date="2023-10">
-                <div class="achievement-icon">🎓</div>
+                <div class="achievement-icon" aria-hidden="true">🎓</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">HTH Researcher</h3>
                     <p class="achievement-detail">Health Tech Hub, Bristol</p>
@@ -1438,7 +1400,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             
             <!-- Speaking -->
             <div class="achievement-card" data-category="speaking" data-date="2024-09">
-                <div class="achievement-icon">🎤</div>
+                <div class="achievement-icon" aria-hidden="true">🎤</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Digital Mental Health Conference</h3>
                     <p class="achievement-detail">Presented MEMoPAD research at Ulster University</p>
@@ -1447,7 +1409,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="speaking" data-date="2024-09">
-                <div class="achievement-icon">🎤</div>
+                <div class="achievement-icon" aria-hidden="true">🎤</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">2nd Multimodal AI Workshop</h3>
                     <p class="achievement-detail">Presented MEMoPAD research at Sheffield University</p>
@@ -1456,7 +1418,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
 
             <div class="achievement-card" data-category="speaking" data-date="2024-07">
-                <div class="achievement-icon">🎤</div>
+                <div class="achievement-icon" aria-hidden="true">🎤</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">NIHR ARC West Presentation</h3>
                     <p class="achievement-detail">Researcher Coffee Catch-up: Digital Solutions for Anxiety Disorders</p>
@@ -1465,7 +1427,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="speaking" data-date="2024-05">
-                <div class="achievement-icon">🎤</div>
+                <div class="achievement-icon" aria-hidden="true">🎤</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">AI in Precision Psychiatry Workshop</h3>
                     <p class="achievement-detail">Elizabeth Blackwell Institute & Bristol Neuroscience Network</p>
@@ -1474,17 +1436,16 @@ I blend competencies too often kept separate: clinical insight, technical execut
             </div>
             
             <div class="achievement-card" data-category="speaking" data-date="2023-11">
-                <div class="achievement-icon">🎤</div>
+                <div class="achievement-icon" aria-hidden="true">🎤</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">University of Aberdeen (BMVC 2023)</h3>
                     <p class="achievement-detail">Invited Speaker: Emotion Recognition for Neurodegenerative Diseases</p>
                     <p class="achievement-date">November 2023</p>
                 </div>
             </div>
-        </div>
 
             <div class="achievement-card" data-category="speaking" data-date="2019-10">
-                <div class="achievement-icon">🎤</div>
+                <div class="achievement-icon" aria-hidden="true">🎤</div>
                 <div class="achievement-content">
                     <h3 class="achievement-title">Premio Nazionale dell'Innovazione (PNI 2019)</h3>
                     <p class="achievement-detail">Italian National Startup and Research Competition</p>
@@ -1513,11 +1474,11 @@ I blend competencies too often kept separate: clinical insight, technical execut
             <div class="availability-header">
                 <div class="status-indicator">
                     <span class="status-pulse"></span>
-                    <span class="status-text">Available Fall 2026</span>
+                    <span class="status-text">Open to new roles</span>
                 </div>
                 <h2>Let's Work Together</h2>
                 <p class="availability-intro">
-                    Graduating Fall 2026 and exploring what's next. Open to product management and research scientist roles in wearable health, as well as collaborative opportunities in digital mental health innovation.
+                    Finishing my PhD thesis and exploring what's next. Open to product management and research scientist roles in wearable health, as well as collaborative opportunities in digital mental health innovation.
                 </p>
             </div>
             
@@ -1526,15 +1487,15 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     <h3>Open To</h3>
                     <ul class="availability-list">
                         <li>
-                            <span class="list-icon">💼</span>
+                            <span class="list-icon" aria-hidden="true">💼</span>
                             <span>Product Management roles in wearable health & mental health tech</span>
                         </li>
                         <li>
-                            <span class="list-icon">🔬</span>
+                            <span class="list-icon" aria-hidden="true">🔬</span>
                             <span>Research Scientist positions in affective computing & digital health</span>
                         </li>
                         <li>
-                            <span class="list-icon">🤝</span>
+                            <span class="list-icon" aria-hidden="true">🤝</span>
                             <span>Collaborative opportunities: co-design, healthtech startups, research partnerships</span>
                         </li>
                     </ul>
@@ -1544,19 +1505,19 @@ I blend competencies too often kept separate: clinical insight, technical execut
                     <h3>Preferred Locations</h3>
                     <ul class="availability-list locations">
                         <li>
-                            <span class="list-icon">🇬🇧</span>
+                            <span class="list-icon" aria-hidden="true"><svg class="list-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
                             <span>United Kingdom (Bristol-based, flexible)</span>
                         </li>
                         <li>
-                            <span class="list-icon">🇪🇺</span>
+                            <span class="list-icon" aria-hidden="true"><svg class="list-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
                             <span>European Union (NL, DE, etc)</span>
                         </li>
                         <li>
-                            <span class="list-icon">🇨🇭</span>
+                            <span class="list-icon" aria-hidden="true"><svg class="list-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
                             <span>Switzerland</span>
                         </li>
                         <li>
-                            <span class="list-icon">🇺🇸</span>
+                            <span class="list-icon" aria-hidden="true"><svg class="list-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
                             <span>United States</span>
                         </li>
                     </ul>
@@ -1570,6 +1531,14 @@ I blend competencies too often kept separate: clinical insight, technical execut
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
                     Email Me
+                </a>
+                <a href="/Luigi-Andrea-Moretti-CV.pdf" class="btn btn-secondary btn-large" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 0.5rem;">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download CV
                 </a>
                 <a href="https://www.linkedin.com/in/luigiandreamoretti/" class="btn btn-secondary btn-large" target="_blank" rel="noopener noreferrer">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
@@ -1601,6 +1570,7 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 <ul class="footer-links">
                     <li><a href="https://www.linkedin.com/in/luigiandreamoretti/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     <li><a href="https://github.com/LuigiAM" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://orcid.org/0009-0002-6180-0565" target="_blank" rel="noopener noreferrer">ORCID</a></li>
                     <li><a href="https://www.researchgate.net/profile/Luigi-Moretti-2" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
                     <li><a href="mailto:hello@luigimoretti.com">Email</a></li>
                 </ul>
@@ -1613,23 +1583,23 @@ I blend competencies too often kept separate: clinical insight, technical execut
                 </p>
                 <a href="https://memopad.luigiandreamoretti.com/newsletter/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Subscribe</a>
             </div>
-        </div>
 
             <div class="footer-column">
                 <h4>About This Site</h4>
                 <p class="footer-description">
-                    Built with AI assistance to focus time on what matters: health innovation and research. 
+                    Built with AI assistance to focus time on what matters: health innovation and research.
                     Human-directed, AI-accelerated.
                 </p>
             </div>
-        
+        </div>
+
         <div class="footer-bottom">
             <p>&copy; 2026 Luigi A. Moretti. All rights reserved.</p>
             <p class="footer-meta">
-                Last updated: July 2026 •
-                <a href="/privacy.html">Privacy</a> • 
+                Last updated: September 2026 •
+                <a href="/privacy">Privacy</a> •
                 <a href="/sitemap.xml">Sitemap</a>
-    </p>
+            </p>
         </div>
     </div>
 </footer>
