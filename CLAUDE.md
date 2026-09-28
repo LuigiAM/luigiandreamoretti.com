@@ -247,7 +247,7 @@ All should point to `https://luigiandreamoretti.com`:
 
 ### Known Issues (To Fix)
 - **Mobile menu** - Previously broken. Fixed Sep 2026 by moving the navbar's `backdrop-filter` to `.navbar::before` (a `backdrop-filter` on `.navbar` made the fixed drawer position relative to the navbar) and making the navbar visible at page load. Verify on real iOS/Android devices.
-- **CSP** - `_headers` ships `Content-Security-Policy-Report-Only`; switch to enforcing once the preview deploy shows no violations.
+- **CSP** - Enforced via `_headers` (Sep 2026). New third-party embeds or scripts must be allowed there first, or they will be blocked.
 
 ---
 

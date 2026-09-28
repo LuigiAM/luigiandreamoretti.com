@@ -1,14 +1,15 @@
 # Cloudflare Pages response headers
 # https://developers.cloudflare.com/pages/configuration/headers/
 #
-# CSP is Report-Only for now: check the browser console on the preview deploy,
-# then rename the header to Content-Security-Policy to enforce it.
+# CSP enforced after a clean Report-Only run on the preview deploy (Sep 2026).
+# If you add a new third-party embed or script, allow its origin here first,
+# or temporarily rename the header to Content-Security-Policy-Report-Only.
 
 /*
   Strict-Transport-Security: max-age=31536000
   X-Frame-Options: DENY
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy-Report-Only: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
