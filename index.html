@@ -1551,6 +1551,59 @@
     </div>
 </section>
 
+<!-- Contact Form Section (delivered via Web3Forms; works without JS) -->
+<section id="contact" class="contact section">
+    <div class="container">
+        <div class="contact-header">
+            <h2 class="section-title">Send a Message</h2>
+            <p class="section-intro">
+                Hiring, collaborating, or curious about MEMoPAD? Drop me a note and I'll get back to you within a few days.
+            </p>
+        </div>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="bf0b8293-338f-4abb-a6a6-ff8a16dae359">
+            <input type="hidden" name="subject" value="New message from luigiandreamoretti.com">
+            <input type="hidden" name="from_name" value="luigiandreamoretti.com">
+            <input type="hidden" name="redirect" value="https://luigiandreamoretti.com/#contact">
+            <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" autocomplete="name" required maxlength="100">
+                </div>
+                <div class="form-field">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" autocomplete="email" required maxlength="200">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="contact-reason">I'm getting in touch about</label>
+                <select id="contact-reason" name="reason" required>
+                    <option value="Role opportunity">A role opportunity</option>
+                    <option value="Research collaboration">A research collaboration</option>
+                    <option value="MEMoPAD">MEMoPAD</option>
+                    <option value="Speaking">A speaking invitation</option>
+                    <option value="Other">Something else</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="6" required maxlength="3000"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large contact-submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">
+                Your message is delivered via Web3Forms. See the <a href="/privacy">privacy policy</a>.
+            </p>
+        </form>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container">

@@ -237,6 +237,7 @@ All should point to `https://luigiandreamoretti.com`:
 6. **Click-to-load Videos** - Self-hosted thumbnails (`.video-thumb` / `.product-card` with `data-video-id`) open YouTube in a native `<dialog>`
 7. **Smooth Scrolling** - CSS `scroll-behavior` + `scroll-margin-top` (no JS); disabled under `prefers-reduced-motion`
 8. **Availability Status** - Pulsing green dot on the "Open to new roles" badge
+9. **Contact Form** - Web3Forms; JS submits via `fetch` with inline status, native POST + redirect back to `#contact` without JS
 
 ### JavaScript Architecture
 - **Modular pattern** - Each feature wrapped in IIFE (Immediately Invoked Function Expression)
@@ -247,7 +248,7 @@ All should point to `https://luigiandreamoretti.com`:
 
 ### Known Issues (To Fix)
 - **Mobile menu** - Previously broken. Fixed Sep 2026 by moving the navbar's `backdrop-filter` to `.navbar::before` (a `backdrop-filter` on `.navbar` made the fixed drawer position relative to the navbar) and making the navbar visible at page load. Verify on real iOS/Android devices.
-- **CSP** - Enforced via `_headers` (Sep 2026). New third-party embeds or scripts must be allowed there first, or they will be blocked.
+- **CSP** - Enforced via `_headers` (Sep 2026). New third-party embeds or scripts must be allowed there first, or they will be blocked. `https://api.web3forms.com` is allowed in `connect-src` and `form-action` for the contact form.
 
 ---
 
@@ -311,7 +312,7 @@ All should point to `https://luigiandreamoretti.com`:
 - **YouTube videos:** Shown as self-hosted thumbnails; nothing is requested from YouTube until the visitor clicks play, then the video loads in privacy-enhanced mode (`youtube-nocookie.com`)
 - **Fonts:** Inter is self-hosted (no Google Fonts requests)
 - **Social links:** Direct links, no embedded widgets
-- **No email capture forms** - Contact via email link only
+- **Contact form** - `#contact` posts to Web3Forms (form-to-email relay, disclosed in privacy policy §2.5); honeypot `botcheck` field for spam; no newsletter/email capture
 
 ### GDPR/CCPA Compliance
 - No cookies requiring consent (Cloudflare analytics exempt)
@@ -357,7 +358,7 @@ All should point to `https://luigiandreamoretti.com`:
 ### Short-term (Next 3 months)
 - [x] Fix mobile hamburger menu bug (Sep 2026 - verify on real devices)
 - [ ] Add blog section for research updates (optional)
-- [ ] Implement contact form with spam protection
+- [x] Implement contact form with spam protection (Sep 2026 - Web3Forms + honeypot, `#contact`)
 - [ ] Add testimonials section (from MEMoPAD participants, collaborators)
 - [x] Create downloadable CV/resume PDF (Sep 2026)
 

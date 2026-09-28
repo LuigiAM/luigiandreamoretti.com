@@ -372,3 +372,55 @@ document.querySelectorAll('.timeline-header').forEach(header => {
         }
     });
 })();
+
+// ===== CONTACT FORM (Web3Forms) =====
+// Without JS the form posts natively and Web3Forms redirects back to #contact.
+(function() {
+    const form = document.querySelector('.contact-form');
+    if (!form || !window.fetch) return;
+
+    const submitBtn = form.querySelector('.contact-submit');
+    const status = form.querySelector('.form-status');
+    const btnLabel = submitBtn.textContent;
+
+    const showStatus = (type, message) => {
+        status.className = 'form-status is-' + type;
+        status.textContent = message;
+    };
+
+    const showError = () => {
+        showStatus('error', 'Sorry, your message could not be sent. Please email me at ');
+        const link = document.createElement('a');
+        link.href = 'mailto:hello@luigimoretti.com';
+        link.textContent = 'hello@luigimoretti.com';
+        status.append(link, '.');
+    };
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        status.textContent = '';
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' }
+            });
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                form.reset();
+                showStatus('success', "Thanks, your message is on its way. I'll reply within a few days.");
+            } else {
+                showError();
+            }
+        } catch (err) {
+            showError();
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = btnLabel;
+        }
+    });
+})();
