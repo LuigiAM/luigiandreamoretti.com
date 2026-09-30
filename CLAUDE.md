@@ -45,6 +45,8 @@ Personal portfolio and professional website for Luigi Andrea Moretti, a PhD rese
 ├── privacy.html            # Privacy policy (served at /privacy)
 ├── 404.html                # Not-found page (prevents SPA soft-404s on Cloudflare Pages)
 ├── _headers                # Cloudflare Pages security + cache headers
+├── _redirects              # Hides /docs/* and /CLAUDE.md from the public site (everything else in the repo is served)
+├── docs/seo-strategy.md    # SEO strategy, baseline, KPIs, review dates and results log
 ├── robots.txt              # Search engine directives (must stay at repo root)
 ├── 472304b9489c28bfa5ee68cdeeb7796d.txt  # IndexNow key file (body = key); keep at root
 ├── sitemap.xml             # SEO sitemap (update <lastmod> on content changes)
@@ -104,12 +106,13 @@ Personal portfolio and professional website for Luigi Andrea Moretti, a PhD rese
 ### Content Hierarchy (Homepage)
 1. **Hero Section** - Name, tagline, availability, photo, primary CTAs
 2. **About Section** - Story arc: Clinical medicine → Healthtech → PhD → Industry transition
-3. **Current Focus (MEMoPAD Spotlight)** - Featured project with video, metrics, narrative
-4. **Experience Timeline** - Expandable cards, reverse chronological, emphasis on impact
-5. **Achievements** - Filterable by category (Funding, Awards, Publications, Community)
-6. **Photo Gallery** - Humanizing element, conference/research/community moments
-7. **Availability Dashboard** - Clear signals: Timeline, Location preferences, Role types
-8. **Footer** - Contact, MEMoPAD link, Privacy policy, Social profiles
+3. **What I Work On (`#expertise`)** - Four topic cards (affective computing, wearables for mental health, co-design, digital health product) linking to MEMoPAD topic pages; main topical-SEO section
+4. **Current Focus (MEMoPAD Spotlight)** - Featured project with video, metrics, narrative
+5. **Experience Timeline** - Expandable cards, reverse chronological, emphasis on impact
+6. **Achievements** - Filterable by category (Funding, Awards, Publications, Community)
+7. **Photo Gallery** - Humanizing element, conference/research/community moments
+8. **Availability Dashboard** - Clear signals: Timeline, Location preferences, Role types
+9. **Footer** - Contact, MEMoPAD link, Privacy policy, Social profiles
 
 ---
 
@@ -137,6 +140,9 @@ Personal portfolio and professional website for Luigi Andrea Moretti, a PhD rese
 - MEMoPAD anxiety monitoring
 - Clinical wearable technology
 - Emotion recognition systems
+
+### Strategy and reviews
+See `docs/seo-strategy.md` for goals, the 27 Sep 2026 baseline, expected effects, how to measure (brand/non-brand regex filters) and the review dates. Update its results log at each checkpoint.
 
 ### Search Console Status
 - **Property:** luigiandreamoretti.com (verified Oct 2025)

@@ -16,3 +16,7 @@
 
 /images/*
   Cache-Control: public, max-age=2592000
+
+# Search engines still read the sitemap; this only stops it appearing as a result
+/sitemap.xml
+  X-Robots-Tag: noindex

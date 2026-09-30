@@ -774,6 +774,108 @@ h3 { font-size: 1.75rem; }
     }
 }
 
+/* ===== EXPERTISE SECTION ===== */
+.expertise {
+    background-color: var(--color-bg);
+    padding-top: 0;
+}
+
+.expertise-header {
+    text-align: center;
+}
+
+.expertise-header .section-title {
+    text-wrap: balance;
+}
+
+.expertise-header .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.expertise-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid transparent;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.expertise-icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.expertise-card h3 {
+    font-size: 1.375rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-dark);
+}
+
+.expertise-card p {
+    color: var(--color-text);
+    margin-bottom: 1.25rem;
+}
+
+.expertise-link {
+    margin-top: auto;
+    color: var(--color-primary-strong);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.expertise-link::after {
+    content: '\00a0→';
+}
+
+.expertise-link:hover,
+.expertise-link:focus-visible {
+    color: var(--color-primary-strong-hover);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .expertise-card {
+        padding: 1.5rem;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .expertise-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .expertise-card:hover {
+        transform: none;
+    }
+}
+
 /* ===== MEMOPAD SPOTLIGHT SECTION ===== */
 .memopad-spotlight {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -800,7 +902,8 @@ h3 { font-size: 1.75rem; }
 }
 
 .spotlight-badge {
-    display: inline-block;
+    /* Block-level but shrink-wrapped, so the badge always sits on its own line above the title */
+    display: table;
     padding: 0.5rem 1.25rem;
     background: var(--color-primary-strong);
     color: white;
@@ -809,7 +912,12 @@ h3 { font-size: 1.75rem; }
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-radius: 50px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
+}
+
+.spotlight-header .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .spotlight-subtitle {
