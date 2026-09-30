@@ -224,6 +224,7 @@ Add one row per checkpoint. Use non-brand filters as in section 5, per month unl
 | Date | Non-brand impr. (both) | Non-brand clicks | "luigi moretti" pos | Personal home clicks / CTR | New MEMoPAD URLs indexed | Scholar versions | Notes and actions taken |
 |---|---|---|---|---|---|---|---|
 | 27 Sep 2026 (baseline) | ~1 | 0 | 11.2 | ~3 / 2.5% | 0/7 | 0/4 | Strategy started |
+| 1 Oct 2026 (note) | | | | | | | Bing still flags "IndexNow" and "title too short" (`/newsletter/august-2025/`). Stale crawl: before 28 Sep that title was "August 2025" (11 chars); it is 60 chars since 30 Sep. IndexNow is confirmed working on both sites (MEMoPAD deploy step succeeded twice, personal-site ping returned 202). Expect both warnings to clear by 14 Oct; if not, use URL Inspection → Live URL in Bing. |
 | 14 Oct 2026 | | | | | | | |
 | 11 Nov 2026 | | | | | | | |
 | 6 Jan 2027 | | | | | | | |
