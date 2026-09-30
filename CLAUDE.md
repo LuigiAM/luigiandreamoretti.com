@@ -1,4 +1,4 @@
-# Luigi A. Moretti - Personal Website Context
+# Luigi Andrea Moretti - Personal Website Context
 
 **Last Updated:** September 2026  
 **Website URL:** https://luigiandreamoretti.com  
@@ -9,7 +9,7 @@
 ## 1. Project Overview
 
 ### Purpose
-Personal portfolio and professional website for Luigi A. Moretti, a PhD researcher transitioning from academia to industry roles in wearable health technology and digital mental health. The site serves three primary audiences:
+Personal portfolio and professional website for Luigi Andrea Moretti, a PhD researcher transitioning from academia to industry roles in wearable health technology and digital mental health. The site serves three primary audiences:
 
 1. **Recruiters & Hiring Managers** - Product Management and Research Scientist roles at companies like Google Health, Apple, Oura, Whoop, Microsoft
 2. **Academic Collaborators** - Researchers, clinicians, and institutions interested in affective computing and digital mental health
@@ -17,7 +17,7 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 
 ### Design Philosophy
 - **Professional yet approachable** - Warm, human tone balanced with technical credibility
-- **Evidence-based storytelling** - Quantified achievements (6/7 co-design phases, 19-25 participants per phase, £10.5K funding, 600+ newsletter subscribers) over vague claims
+- **Evidence-based storytelling** - Quantified achievements (6/7 co-design phases, 10–25 participants per phase, £10.5K funding, 600+ newsletter subscribers) over vague claims
 - **Unique positioning** - Emphasizes rare combination of clinical insight (MD), technical execution (startup experience), and academic rigor (PhD)
 - **Action-oriented** - Clear CTAs for recruiters (Download CV, "Open to new roles"), collaborators (MEMoPAD Project), and connections (LinkedIn)
 
@@ -46,6 +46,7 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 ├── 404.html                # Not-found page (prevents SPA soft-404s on Cloudflare Pages)
 ├── _headers                # Cloudflare Pages security + cache headers
 ├── robots.txt              # Search engine directives (must stay at repo root)
+├── 472304b9489c28bfa5ee68cdeeb7796d.txt  # IndexNow key file (body = key); keep at root
 ├── sitemap.xml             # SEO sitemap (update <lastmod> on content changes)
 ├── favicon.ico             # 16/32/48px favicon (root, for Google results)
 ├── Luigi-Andrea-Moretti-CV.pdf  # Downloadable CV (hero + availability CTAs)
@@ -86,7 +87,7 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 - Differentiates from pure engineers or academics
 
 **2. User-Centered Rigor**
-> "7-phase co-design (19-25 patients, carers and clinicians per phase) ensures research translates to real-world use"
+> "7-phase co-design (10–25 patients, carers and clinicians per phase) ensures research translates to real-world use"
 - Emphasizes methodological thoroughness
 - Demonstrates commitment to stakeholder inclusion
 
@@ -116,7 +117,7 @@ Personal portfolio and professional website for Luigi A. Moretti, a PhD research
 
 ### Schema.org Structured Data
 **Enhanced JSON-LD with @graph structure:**
-- **Person** entity (Luigi A. Moretti) - complete credentials, expertise, affiliations
+- **Person** entity (Luigi Andrea Moretti) - complete credentials, expertise, affiliations
 - **WebSite** entity - site metadata, language, publisher info
 - **EducationalOrganization** (UWE Bristol) - institutional links
 - **ResearchProject** (MEMoPAD) - separate entity with funding, description
@@ -420,6 +421,8 @@ All should point to `https://luigiandreamoretti.com`:
 ### When Helping with Updates
 
 **Content:**
+- Always write the name as "Luigi Andrea Moretti" (never "Luigi A. Moretti"); short forms live only in the JSON-LD `alternateName`
+- Keep MEMoPAD facts in sync with memopad.luigiandreamoretti.com (`src/data/project.ts` there): 10–25 participants per phase; daily-use prototype = heart rate + movement, lab studies = EDA + skin temperature
 - Maintain consistent brand voice (professional yet approachable)
 - Quantify achievements when possible (numbers, metrics, outcomes)
 - Avoid jargon unless audience-appropriate (technical for academic, accessible for recruiters)
@@ -467,7 +470,7 @@ All should point to `https://luigiandreamoretti.com`:
 ## 13. Contact & Support
 
 ### Owner
-**Luigi A. Moretti**  
+**Luigi Andrea Moretti**  
 Email: hello@luigimoretti.com  
 LinkedIn: https://www.linkedin.com/in/luigiandreamoretti/  
 GitHub: https://github.com/LuigiAM
@@ -490,6 +493,7 @@ GitHub: https://github.com/LuigiAM
 |---------|------|---------|
 | 1.0 | Oct 2025 | Initial creation after Cloudflare Pages migration |
 | 1.1 | Sep 2026 | Site audit fixes: SEO files at root, favicon/OG image, 404 page, self-hosted font, click-to-load video, image optimisation, `_headers`, AA contrast token, mobile nav fix, CV download |
+| 1.2 | Sep 2026 | Name standardised to "Luigi Andrea Moretti"; co-design and sensor facts aligned with MEMoPAD site; ResearchProject `@id` merged with MEMoPAD (`#research-project`); IndexNow key file |
 
 ---
 

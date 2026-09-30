@@ -1,6 +1,6 @@
 # luigiandreamoretti.com
 
-Source for [luigiandreamoretti.com](https://luigiandreamoretti.com) — the personal portfolio site of **Luigi A. Moretti**, MD, PhD candidate at the University of the West of England (Bristol).
+Source for [luigiandreamoretti.com](https://luigiandreamoretti.com) — the personal portfolio site of **Luigi Andrea Moretti**, MD, PhD candidate at the University of the West of England (Bristol).
 
 The site serves three audiences: recruiters and hiring managers in wearable health technology and digital mental health, academic collaborators in affective computing, and the [MEMoPAD project](https://memopad.luigiandreamoretti.com) community.
 
@@ -16,7 +16,7 @@ This repository contains both software and non-software materials, governed by *
 
 **Software components** — `css/style.css`, `js/main.js`, the HTML structural scaffolding (semantic markup, `<head>` configuration, Schema.org JSON-LD setup), and the build/tooling configuration — are released under the [MIT License](./LICENSE). You may use, modify, and redistribute these freely. Attribution back to this project is appreciated but not required.
 
-**Non-software materials** — including all written content (bio, About section, experience copy, achievements descriptions, taglines, meta text), the name "Luigi A. Moretti" used as a personal identifier, all images and photographs under `images/`, third-party institutional logos under `images/logos/`, and all favicons and open-graph assets — are **© 2025–2026 Luigi A. Moretti, all rights reserved**. These materials are **not** covered by the MIT License. See [NOTICE.md](./NOTICE.md) for the full scope breakdown.
+**Non-software materials** — including all written content (bio, About section, experience copy, achievements descriptions, taglines, meta text), the names "Luigi Andrea Moretti" and "Luigi A. Moretti" used as personal identifiers, all images and photographs under `images/`, third-party institutional logos under `images/logos/`, and all favicons and open-graph assets — are **© 2025–2026 Luigi Andrea Moretti, all rights reserved**. These materials are **not** covered by the MIT License. See [NOTICE.md](./NOTICE.md) for the full scope breakdown.
 
 **MEMoPAD-related imagery** appearing on this site (e.g., `images/gallery/memopad-ecosystem.webp`) is additionally subject to the rights statement in the [MEMoPAD repository](https://github.com/LuigiAM/PhD_project_website/blob/master/NOTICE.md) and **pending UK registered design protection**. Reproduction or derivative use of MEMoPAD prototype visuals is prohibited without written permission.
 

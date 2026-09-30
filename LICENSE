@@ -18,7 +18,8 @@ Out of scope (all rights reserved — see NOTICE.md):
 - The textual VALUES inside Schema.org JSON-LD (e.g., description, jobTitle,
   knowsAbout entries, alumniOf details, affiliation text) — the structure is
   MIT, the content authored within it is not
-- The name "Luigi A. Moretti" used as a personal identifier on this site
+- The names "Luigi Andrea Moretti" and "Luigi A. Moretti" used as personal
+  identifiers on this site
 - All images, graphics, illustrations, and photographs under public/ and
   images/ (including hero images, gallery photos, conference photos,
   achievement images, favicons, and open-graph images)
@@ -38,7 +39,7 @@ See NOTICE.md for the complete scope breakdown.
 
 MIT License
 
-Copyright (c) 2025-2026 Luigi A. Moretti
+Copyright (c) 2025-2026 Luigi Andrea Moretti
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -19,7 +19,7 @@ You may freely use, modify, and redistribute these components under MIT terms. A
 
 ## 2. Non-software materials — All Rights Reserved
 
-The following materials are copyright © 2025–2026 Luigi A. Moretti and are **not** covered by the MIT License. All rights are reserved unless explicit written permission is granted.
+The following materials are copyright © 2025–2026 Luigi Andrea Moretti and are **not** covered by the MIT License. All rights are reserved unless explicit written permission is granted.
 
 ### 2.1 Written content
 
@@ -30,8 +30,8 @@ The following materials are copyright © 2025–2026 Luigi A. Moretti and are **
 
 ### 2.2 Personal identity
 
-- The name "Luigi A. Moretti" as used on this site to identify a real individual
-- Photographs, likenesses, and image rights of Luigi A. Moretti
+- The names "Luigi Andrea Moretti" and "Luigi A. Moretti" as used on this site to identify a real individual
+- Photographs, likenesses, and image rights of Luigi Andrea Moretti
 
 These are protected by personality rights, passing-off, and applicable image-rights law. They are not registered trademarks but reuse without permission is not authorised, particularly in commercial, endorsement, or impersonation contexts.
 
@@ -67,7 +67,7 @@ Any visual depictions of the MEMoPAD project that appear on this site — includ
 
 **https://github.com/LuigiAM/PhD_project_website/blob/master/NOTICE.md**
 
-These materials are © 2025–2026 Luigi A. Moretti, and visual depictions of the MEMoPAD prototype (phone application, smartwatch interface, and web application) are subject to **pending UK registered design protection**. Reproduction, derivative use, or incorporation into other products is prohibited without written permission. See ADR-013 in the MEMoPAD knowledge base for the underlying decision.
+These materials are © 2025–2026 Luigi Andrea Moretti, and visual depictions of the MEMoPAD prototype (phone application, smartwatch interface, and web application) are subject to **pending UK registered design protection**. Reproduction, derivative use, or incorporation into other products is prohibited without written permission. See ADR-013 in the MEMoPAD knowledge base for the underlying decision.
 
 ---
 
@@ -79,7 +79,7 @@ This site was built with AI assistance under human direction. The licensing scop
 
 For any use of the non-software materials listed above — including academic citation that exceeds fair-dealing limits, commercial reuse, derivative works, media reproduction, recruitment-related republication of bio content, or reuse of photographs — contact:
 
-**Luigi A. Moretti**
+**Luigi Andrea Moretti**
 hello@luigimoretti.com
 https://luigiandreamoretti.com
 

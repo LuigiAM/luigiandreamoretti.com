@@ -1,4 +1,4 @@
-# Luigi A. Moretti Personal Website - Robots.txt
+# Luigi Andrea Moretti Personal Website - Robots.txt
 User-agent: *
 Allow: /
 
