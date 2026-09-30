@@ -64,7 +64,7 @@ About 57k impressions come from the generic query "memopad" in the Philippines, 
 - JSON-LD `disambiguatingDescription`: "medical doctor and PhD researcher at UWE Bristol…".
 
 **Title and description**
-- Title: "Luigi Andrea Moretti | Affective Computing & Digital Mental Health".
+- Title: "Luigi Andrea Moretti | Affective Computing & Digital Health" (59 chars; shortened on 1 Oct from a 66-char version to stay under Bing's 60–65 limit and Google's ~60-char display).
 - Meta description: Bristol, UK plus the topics.
 
 **New "What I Work On" section**
@@ -225,6 +225,7 @@ Add one row per checkpoint. Use non-brand filters as in section 5, per month unl
 |---|---|---|---|---|---|---|---|
 | 27 Sep 2026 (baseline) | ~1 | 0 | 11.2 | ~3 / 2.5% | 0/7 | 0/4 | Strategy started |
 | 1 Oct 2026 (note) | | | | | | | Bing still flags "IndexNow" and "title too short" (`/newsletter/august-2025/`). Stale crawl: before 28 Sep that title was "August 2025" (11 chars); it is 60 chars since 30 Sep. IndexNow is confirmed working on both sites (MEMoPAD deploy step succeeded twice, personal-site ping returned 202). Expect both warnings to clear by 14 Oct; if not, use URL Inspection → Live URL in Bing. |
+| 1 Oct 2026 (note) | | | | | | | Bing URL Inspection on `/` (Bing Index tab) flagged "Title too long" and "Meta description too long": that is the pre-28 Sep version (title 81, description 169 chars). Homepage title shortened to 59 chars anyway (66 was borderline for Bing); description is 152 (Bing range 25–160). |
 | 14 Oct 2026 | | | | | | | |
 | 11 Nov 2026 | | | | | | | |
 | 6 Jan 2027 | | | | | | | |
